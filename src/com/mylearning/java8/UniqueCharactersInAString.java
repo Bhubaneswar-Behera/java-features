@@ -8,7 +8,7 @@ import java.util.stream.Collectors;
 
 public class UniqueCharactersInAString {
     public static void main(String[] args) {
-        String str = "illovejavaandspring";
+        String str = "ilovejavaandspring";
 
         List<String> output = Arrays.stream(str.split(""))
                 .collect(Collectors.groupingBy(Function.identity(), Collectors.counting()))
