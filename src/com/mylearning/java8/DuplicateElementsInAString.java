@@ -7,7 +7,7 @@ import java.util.stream.Collectors;
 
 public class DuplicateElementsInAString {
     public static void main(String[] args) {
-        String str = "illovejavaandspring";
+        String str = "ilovejavaandspring";
 
         var duplicateElements = Arrays.stream(str.split(""))
                 .collect(Collectors.groupingBy(Function.identity(),Collectors.counting()))
