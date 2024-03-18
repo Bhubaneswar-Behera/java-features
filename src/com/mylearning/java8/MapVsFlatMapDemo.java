@@ -12,11 +12,13 @@ public class MapVsFlatMapDemo {
                 new User("user2","0987654321", Arrays.asList("ghi@gmail.com","jkl@gmail.com")))
                 .collect(Collectors.toList());
 
+        //Phone is String so map
         List<String> phoneNumLists = users.stream()
                 .map(User::getPhone)
                 .collect(Collectors.toList());
         System.out.println(phoneNumLists);
 
+        //email is List<String>
         List<List<String>> emailListMap = users.stream()
                 .map(User::getEmail)
                 .collect(Collectors.toList());
