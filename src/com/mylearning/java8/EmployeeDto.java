@@ -1,11 +1,23 @@
 package com.mylearning.java8;
 
-public class Employee {
+public class EmployeeDto {
     private int id;
     private String name;
     private String grade;
     private String dept;
     private long salary;
+
+    public EmployeeDto() {
+    }
+
+    public EmployeeDto(int id, String name, String grade, String dept, long salary) {
+        this.id = id;
+        this.name = name;
+        this.grade = grade;
+        this.dept = dept;
+        this.salary = salary;
+    }
+
 
     public int getId() {
         return id;
@@ -47,30 +59,9 @@ public class Employee {
         this.salary = salary;
     }
 
-    public Employee(int id, String name, String dept, long salary) {
-        super();
-        this.id = id;
-        this.name = name;
-        this.dept = dept;
-        this.salary = salary;
-    }
-
-    public Employee(int id, String name, String grade, String dept, long salary) {
-        this.id = id;
-        this.name = name;
-        this.grade = grade;
-        this.dept = dept;
-        this.salary = salary;
-    }
-
-    public Employee() {
-        super();
-        // TODO Auto-generated constructor stub
-    }
-
     @Override
     public String toString() {
-        return "Employee{" +
+        return "EmployeeDto{" +
                 "id=" + id +
                 ", name='" + name + '\'' +
                 ", grade='" + grade + '\'' +
