@@ -13,6 +13,8 @@ import java.util.List;
  *
  */
 public class CountFactorsOFANumber {
+
+
     public static int countFactorBrute(int A){
         int count = 0;
         List<Integer> list = new ArrayList<>();
