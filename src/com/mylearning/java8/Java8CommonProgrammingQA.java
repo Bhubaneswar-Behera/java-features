@@ -83,7 +83,20 @@ public class Java8CommonProgrammingQA {
                 .skip(1)
                 .findFirst()
                 .get();
-        System.out.println("Student who has second rank : \n"+secondRankStudent);
+        //System.out.println("Student who has second rank : \n"+secondRankStudent);
+    }
+
+
+    private static void averageRankOfFemaleStudents(List<Student> studentList){
+        /*Map<String, Double> averageStudents = studentList.stream()
+                .collect(Collectors.groupingBy(Student::getGender, Collectors.averagingInt(Student::getAge)));*/
+        //System.out.println("Average age of male and female students :\n"+averageStudents);
+
+        Map<String, Double> averageRankOfFemaleStudents = studentList.stream().filter(e -> e.getGender().equalsIgnoreCase("Female"))
+                .collect(Collectors.groupingBy(Student::getDept, Collectors.averagingDouble(Student::getRank)));
+
+        System.out.println("Average Rank Of Female Female Students : "+averageRankOfFemaleStudents);
+
     }
     public static void main(String[] args) {
         List<Student> studentList = createStudentList();
@@ -120,6 +133,9 @@ public class Java8CommonProgrammingQA {
 
         //10 .Find the student who has second rank
         getStudentHavingSecondRank(studentList);
+
+        //11. averageRankOfFemaleStudents
+        averageRankOfFemaleStudents(studentList);
 
     }
 
