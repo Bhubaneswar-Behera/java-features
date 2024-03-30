@@ -1,4 +1,4 @@
-package com.scaler.introduction.to.arrays;
+package com.scaler.secondday.introduction.to.arrays;
 
 import java.util.Arrays;
 

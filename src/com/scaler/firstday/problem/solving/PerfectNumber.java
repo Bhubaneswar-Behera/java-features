@@ -1,4 +1,4 @@
-package com.scaler.problem.solving;
+package com.scaler.firstday.problem.solving;
 
 import java.util.ArrayList;
 import java.util.Arrays;

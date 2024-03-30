@@ -1,4 +1,4 @@
-package com.scaler.introduction.to.arrays;
+package com.scaler.secondday.introduction.to.arrays;
 
 public class ArrayReference {
     static void fun(int[]arr) {

@@ -1,7 +1,4 @@
-package com.scaler.problem.solving;
-
-import java.util.ArrayList;
-import java.util.List;
+package com.scaler.firstday.problem.solving;
 
 public class CountPrimeNumbers {
     public int solve(int A){
