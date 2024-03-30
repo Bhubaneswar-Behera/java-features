@@ -1,7 +1,4 @@
-package com.scaler.firstday.problem.solving;
-
-import java.util.ArrayList;
-import java.util.List;
+package com.scaler.intermediate.dsa.solving;
 
 public class PrimeNumber {
 

@@ -1,7 +1,6 @@
-package com.scaler.firstday.problem.solving;
+package com.scaler.intermediate.dsa.solving;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.List;
 
 public class PerfectNumber {
