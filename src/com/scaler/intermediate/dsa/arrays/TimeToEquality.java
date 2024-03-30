@@ -1,7 +1,6 @@
-package com.scaler.secondday.introduction.to.arrays;
+package com.scaler.intermediate.dsa.arrays;
 
 import java.util.ArrayList;
-import java.util.Arrays;
 import java.util.Collections;
 
 /**

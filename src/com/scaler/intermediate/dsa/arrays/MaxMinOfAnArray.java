@@ -1,8 +1,7 @@
-package com.scaler.secondday.introduction.to.arrays;
+package com.scaler.intermediate.dsa.arrays;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 /**
  * Given an array A of size N. You need to find the sum of
