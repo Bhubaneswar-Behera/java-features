@@ -12,7 +12,7 @@ import java.util.List;
  *
  *
  */
-public class CountFactorsOFANumber {
+public class CountFactorsOfANumber {
 
 
     public static int countFactorBrute(int A){
@@ -24,14 +24,14 @@ public class CountFactorsOFANumber {
                 count++;
             }
         }
-        System.out.println(list);
+        //System.out.println(list);
         return count;
     }
 
     public static int countFactor(int A){
         int count = 0;
         List<Integer> list = new ArrayList<>();
-        for(int i = 1 ; i <= A/i;i++){
+        for(int i = 1 ; i <= A/i ; i++){
             if(A % i == 0){
                 count++;
                 list.add(i);
@@ -42,11 +42,26 @@ public class CountFactorsOFANumber {
 
             }
         }
-        System.out.println(list);
+        //System.out.println(list);
         return count;
+    }
+    public static int solve(int A) {
+        int answer = 0;
+
+        for (int i = 1 ; i <= A/i;i++) {
+            if(A % i == 0){
+                answer++;
+                if(i != A/i){
+                    answer++;
+                }
+            }
+        }
+
+        return answer;
     }
     public static void main(String[] args) {
         System.out.println(countFactorBrute(24));
         System.out.println(countFactor(24));
+        System.out.println(solve(24));
     }
 }
