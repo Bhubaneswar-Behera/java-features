@@ -19,7 +19,7 @@ package com.scaler.intermediate.dsa.prefixsum;
 public class PrefixSum {
 
     public static void querySumBrute(int[] arr, int[][] queries, int n , int q) {
-        for(int i = 0 ; i < queries.length ; i++){
+        for(int i = 0 ; i < n ; i++){
             int l = queries[i][0];
             int r = queries[i][1];
             int sum = 0;
@@ -49,9 +49,7 @@ public class PrefixSum {
             }
             System.out.println("l-->" + l +" r-->" + r + " Prefix sum : " +sum);
         }
-
     }
-
 
     public static void main(String[] args) {
         int[] arr = {-3,6,2,4,5,2,8,-9,3,1};
