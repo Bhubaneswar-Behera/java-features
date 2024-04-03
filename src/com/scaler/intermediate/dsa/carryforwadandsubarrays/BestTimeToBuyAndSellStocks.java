@@ -1,5 +1,6 @@
 package com.scaler.intermediate.dsa.carryforwadandsubarrays;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -30,7 +31,7 @@ public class BestTimeToBuyAndSellStocks {
         return answer;
     }
 
-    public int maxProfit(final List<Integer> A) {
+    public static int maxProfit(final List<Integer> A) {
         int n = A.size();
         if(n == 0){
             return 0;
@@ -47,10 +48,13 @@ public class BestTimeToBuyAndSellStocks {
         int[] A = {2,1};
         System.out.println(maxProfit(A));
 
-        List<Integer> arrayList = new Integer();
+        List<Integer> arrayList = new ArrayList<>();
         arrayList.add(1);
         arrayList.add(4);
         arrayList.add(5);
-        arrayList.add(2)
+        arrayList.add(2);
+
+        System.out.println(maxProfit(arrayList));
+
     }
 }
