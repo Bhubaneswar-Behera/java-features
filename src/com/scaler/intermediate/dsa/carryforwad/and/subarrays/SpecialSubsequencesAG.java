@@ -1,4 +1,4 @@
-package com.scaler.intermediate.dsa.carryforwadandsubarrays;
+package com.scaler.intermediate.dsa.carryforwad.and.subarrays;
 
 /**
  * Give a String of lowercase characters, return the count of pairs (i,e)

@@ -1,4 +1,4 @@
-package com.scaler.intermediate.dsa.carryforwadandsubarrays;
+package com.scaler.intermediate.dsa.carryforwad.and.subarrays;
 
 import java.util.ArrayList;
 import java.util.Arrays;
