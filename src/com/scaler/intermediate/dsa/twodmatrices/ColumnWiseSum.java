@@ -21,7 +21,7 @@ public class ColumnWiseSum {
         int column = A[0].length;
         int[] answer = new int[column];
 
-        for(int i = 0; i< column;i++){
+        for(int i = 0; i < column;i++){
             int sum = 0;
             for(int j = 0 ;j < row;j++){
                 sum = sum + A[j][i];
