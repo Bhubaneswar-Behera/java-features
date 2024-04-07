@@ -12,11 +12,11 @@ package com.scaler.intermediate.dsa.twodmatrices;
  */
 public class AntiDiagonalMatrix {
 
-    public static void printAntiDiagonalBrute(int[][] matrix){
+    public static void solve(int[][] matrix){
         int n = matrix.length;
         int i = 0;
         int j = n - 1 ;
-        while(i < n){
+        while(i < n){ // or while(j >= 0)
             System.out.print(matrix[i][j] + " ");
             i++;
             j--;
@@ -26,7 +26,7 @@ public class AntiDiagonalMatrix {
         int[][] matrix = {{1, 5, 8},
                           {4, 3, 1},
                           {6, 5, 2}};
-        printAntiDiagonalBrute(matrix);
+        solve(matrix);
 
     }
 }
