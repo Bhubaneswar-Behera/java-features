@@ -1,5 +1,7 @@
 package com.scaler.intermediate.dsa.twodmatrices;
 
+import java.util.Arrays;
+
 /**
  * Given an 2D matrix mat[n][m], print the row-wise sum.
  *
@@ -12,21 +14,26 @@ package com.scaler.intermediate.dsa.twodmatrices;
  *
  */
 public class RowWiseSum {
-    public static void solution(int[][] matrix){
-        int n = matrix.length;
 
-        for(int i = 0 ; i< n;i++){
+    public static int[] solve(int[][] A) {
+        int n = A.length;
+        int column  = A[0].length;
+        int[] result = new int[n];
+
+        for(int i = 0 ;i< n ;i++){
             int sum = 0;
-            for(int j = 0;j <matrix[i].length;j++){
-                sum = sum + matrix[i][j];
+            for (int j = 0; j < column;j++) {
+                sum =sum + A[i][j];
             }
-            System.out.print(sum+" ");
+            result[i] = sum;
         }
+        return result;
     }
     public static void main(String[] args) {
-       int[][] matrix = {{1,2,3,4},
-                         {5,6,7,8},
-                        {9,10,11,12}};
-        solution(matrix);
+       int[][] A = {{1,2,3,4},
+                    {5,6,7,8},
+                   {9,10,11,12}};
+
+        System.out.println(Arrays.toString(solve(A)));
     }
 }
