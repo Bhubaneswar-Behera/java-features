@@ -47,6 +47,33 @@ public class PrintAllAntiDiagonals {
         return answer;
     }
 
+    public static void printDiagonal(int[][] A) {
+       int n = A.length;
+       int m = A[0].length;
+
+       for(int c = 0;c < m;c++){
+           int i = 0;
+           int j = c;
+           while (i < n && j>=0 ){
+               System.out.print(A[i][j]+" ");
+               i++;
+               j--;
+           }
+           System.out.println();
+       }
+
+       for(int r = 1; r < n -1;r++){
+           int  i = r;
+           int j = m - 1;
+           while (i < n && j >= 0) {
+               System.out.print(A[i][j] + " ");
+               i++;
+               j--;
+           }
+           System.out.println();
+       }
+    }
+
 
     public static void main(String[] args) {
         int[][] A = {{1, 2,  3,  4},
@@ -54,7 +81,8 @@ public class PrintAllAntiDiagonals {
                      {9, 10, 11, 12}};
         int[][] result = diagonal(A);
         for(int[] a : result){
-            System.out.println(Arrays.toString(a));
+            //System.out.println(Arrays.toString(a));
         }
+        printDiagonal(A);
     }
 }
