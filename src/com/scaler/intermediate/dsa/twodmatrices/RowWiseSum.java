@@ -6,7 +6,7 @@ import java.util.Arrays;
  * Given an 2D matrix mat[n][m], print the row-wise sum.
  *
  * m[3][4] = {{1,2,3,4},
- *             {5,6,7,8},
+ *            {5,6,7,8},
  *            {9,10,11,12}}
  *  Output: 10 26 42
  * Explanation :
