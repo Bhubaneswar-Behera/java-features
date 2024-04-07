@@ -32,10 +32,11 @@ public class DiagonalMatrix {
         int n = A.length;
         int answer = 0;
         for(int i =0;i < n;i++){
-            answer =answer + A[i][i];
+            answer = answer + A[i][i];
         }
         return answer;
     }
+
     public static void main(String[] args) {
         int[][] matrix = {{1,5,8},
                           {4,3,1},
@@ -45,6 +46,5 @@ public class DiagonalMatrix {
         printDiagonalOptimized(matrix);
         System.out.println();
         System.out.println(solve(matrix));
-
     }
 }
