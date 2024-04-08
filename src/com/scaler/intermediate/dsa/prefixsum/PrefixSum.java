@@ -19,7 +19,7 @@ package com.scaler.intermediate.dsa.prefixsum;
 public class PrefixSum {
 
     public static void querySumBrute(int[] arr, int[][] queries, int n , int q) {
-        for(int i = 0 ; i < n ; i++){
+        for(int i = 0 ; i < q ; i++){
             int l = queries[i][0];
             int r = queries[i][1];
             int sum = 0;
@@ -38,7 +38,7 @@ public class PrefixSum {
             prefixSum[i] = prefixSum[i -1] + A[i];
         }
 
-        for(int i = 0; i <q;i++){
+        for(int i = 0; i < q;i++){
             int l = B[i][0];
             int r = B[i][1];
             int sum = 0;
