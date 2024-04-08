@@ -1,7 +1,5 @@
 package com.scaler.intermediate.dsa.prefixsum;
 
-import java.util.ArrayList;
-
 /**
  * Given an Array of size n, count the number of special indices in the array.
  *
@@ -16,37 +14,6 @@ import java.util.ArrayList;
  *
  */
 public class SpecialIndices {
-
-    public static int countSpecialIndices(int[] A){
-        int n = A.length;
-        int[] prefixSumOfEvenIndices = new int[n];
-        int[] prefixSumOfOddIndices = new int[n];
-
-        prefixSumOfEvenIndices[0] = A[0];
-        prefixSumOfOddIndices[0] = 0;
-
-        for(int i = 1 ; i < n ;i++){
-            if(i % 2 == 0){
-                prefixSumOfEvenIndices[i] = prefixSumOfEvenIndices[i - 1] + A[i];
-                prefixSumOfOddIndices[i] = prefixSumOfOddIndices[i -1];
-            } else {
-                prefixSumOfOddIndices[i] = prefixSumOfOddIndices[i - 1] + A[i];
-                prefixSumOfEvenIndices[i] = prefixSumOfEvenIndices[i -1];
-            }
-        }
-        int count = 0;
-        for(int i = 0 ; i < n ;i++){
-            int eventSum = (i == 0 ? 0 : prefixSumOfEvenIndices[i - 1]) + (prefixSumOfOddIndices[n - 1] - prefixSumOfOddIndices[i]);
-            int oddSum = (i == 0 ? 0 : prefixSumOfOddIndices[i - 1] )+ (prefixSumOfEvenIndices[n - 1] - prefixSumOfEvenIndices[i]);
-
-            if(eventSum == oddSum){
-                count++;
-            }
-        }
-
-        return count;
-    }
-
 
     public static int solve(int[] A) {
         int n = A.length;
@@ -67,7 +34,7 @@ public class SpecialIndices {
             }
         }
         int count = 0;
-        for(int i = 0; i< n ;i++){
+        for(int i = 0; i < n ;i++){
             int evnSumIndex = 0;
             int oddSumIndex = 0;
 
