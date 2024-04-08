@@ -35,14 +35,14 @@ import java.util.Arrays;
  */
 public class RotateMatrix {
 
-    public static void solve(int[][] A) {
+    public static int[][] solve(int[][] A) {
         int n = A.length;
+        int[][] result = new int[n][n];
+
        //Transpose
-        for(int i = 1;i < n; i++){
-            for(int j = 0;j < i; j++){
-                int temp = A[i][j];
-                A[i][j] = A[j][i];
-                A[j][i] = temp;
+        for(int i = 0;i < n; i++){
+            for(int j = 0;j < n; j++){
+                result[j][i] = A[i][j];
             }
         }
 
@@ -51,65 +51,25 @@ public class RotateMatrix {
            int i = 0;
            int j  = n - 1;
            while (i < j) {
-               int temp =A[column][i];
-               A[column][i] = A[column][j];
-               A[column][j] = temp;
+               int temp = result[column][i];
+               result[column][i] = result[column][j];
+               result[column][j] = temp;
                i++;
                j--;
            }
         }
-
+        return result;
     }
 
-
-    public void solve1(int[][] A) {
-        int n=A.length;
-        //Transposing the matrix in SC=O(1)
-        for(int i=1;i<n;i++){
-            for(int j=0;j<i;j++){
-                int temp=A[i][j];
-                A[i][j]=A[j][i];
-                A[j][i]=temp;
-            }
-        }
-        //reversing each row;
-        for(int c=0;c<n;c++){
-            int i=0,j=n-1;
-            while(i<j){
-                int temp=A[c][i];
-                A[c][i]=A[c][j];
-                A[c][j]=temp;
-                i++;j--;
-            }
-        }
-    }
-
-
-
-    public static void reverse(int[] A){
-        int n = A.length;
-        int j = n -1;
-        for(int i =0 ;i < n/2;i++){
-            int temp = A[i];
-            A[i] = A[j];
-            A[j] = temp;
-        }
-    }
-
-    public static int[][] transpose(int[][] A) {
-        int n = A.length;
-        int[][] answer = new int[n][n];
-        for(int i = 0 ; i < n ;i++){
-            for (int j = 0;j < i ;j++) {
-                answer[j][i] = A[i][j];
-            }
-        }
-        return answer;
-    }
     public static void main(String[] args) {
-        int[][] A = {{1, 2},
-                     {3, 4}};
-        solve(A);
+        int[][] A = {{1, 2, 3},
+                     {4, 5, 6},
+                     {7, 8, 9}};
+
+        int[][] result = solve(A);
+        for(int[] a : result){
+            System.out.println(Arrays.toString(a));
+        }
 
     }
 }
