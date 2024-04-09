@@ -58,7 +58,7 @@ public class RotateArrayKTimes {
     public static ArrayList<Integer> solve(ArrayList<Integer> A,   int B) {
         int n = A.size();
         B = B % A.size();
-        rotate(A, 0 , B-1);
+        rotate(A, 0 , n-1);
         rotate(A,0,B-1);
         rotate(A,B, n -1);
         return A;
