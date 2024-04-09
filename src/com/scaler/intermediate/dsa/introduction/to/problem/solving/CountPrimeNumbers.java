@@ -1,4 +1,4 @@
-package com.scaler.intermediate.dsa.solving;
+package com.scaler.intermediate.dsa.introduction.to.problem.solving;
 
 public class CountPrimeNumbers {
     public int solve(int A){

@@ -1,4 +1,4 @@
-package com.scaler.intermediate.dsa.solving;
+package com.scaler.intermediate.dsa.introduction.to.problem.solving;
 
 import java.util.ArrayList;
 import java.util.List;
