@@ -2,11 +2,14 @@ package com.scaler.intermediate.dsa.carryforwad.and.subarrays;
 
 import java.util.ArrayList;
 import java.util.Arrays;
-
 /**
  *Print a subarray of an array, given the array
  * the start index and the end index.
  *
+ * Example Input : A = [4, 3, 2, 6] B = 1 C = 3
+ * Output : [3, 2, 6]
+ *
+ * Explanation : The subarray of A from 1 to 3 is [3, 2, 6].
  */
 public class SubArrayInGivenRange {
 
@@ -36,10 +39,10 @@ public class SubArrayInGivenRange {
     }
     public static void main(String[] args) {
         int[] A = {4,3,2,6};
-        int startIndex = 0;
-        int endIndex = 5;
+        int startIndex = 1;
+        int endIndex = 3;
         //printSubArray(a,startIndex,endIndex);
-        //System.out.println(Arrays.toString(solve(A,1,3)));
+        System.out.println(Arrays.toString(solve(A,startIndex,endIndex)));
 
         ArrayList<Integer> list  =new ArrayList<>();
         list.add(4);
