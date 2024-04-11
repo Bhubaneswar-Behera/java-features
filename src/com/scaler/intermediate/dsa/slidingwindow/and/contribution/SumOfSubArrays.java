@@ -39,6 +39,15 @@ public class SumOfSubArrays {
         }
         return totalSum;
     }
+    public long subarraySum(int[] A) {
+        int n = A.length;
+        long total = 0;
+
+        for(int i = 0;i< n;i++){
+            total = total + (long)A[i]*(i+1)*(n-i);
+        }
+        return total;
+    }
     public static void main(String[] args) {
         int[] A = {1,2,3};
         int n = A.length;
