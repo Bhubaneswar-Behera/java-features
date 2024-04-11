@@ -38,8 +38,8 @@ public class SpecialIndices {
             int evnSumIndex = 0;
             int oddSumIndex = 0;
 
-            evnSumIndex = (i == 0 ? 0 : prefixSumEvenIndexArray[i -1]) + (prefixSumOddIndexArray[n -1] - prefixSumOddIndexArray[i]);
-            oddSumIndex = (i == 0 ? 0 : prefixSumOddIndexArray[i - 1]) + (prefixSumEvenIndexArray[n -1] - prefixSumEvenIndexArray[i]);
+            evnSumIndex = (i == 0 ? 0 : prefixSumEvenIndexArray[i - 1]) + (prefixSumOddIndexArray[n - 1] - prefixSumOddIndexArray[i]);
+            oddSumIndex = (i == 0 ? 0 : prefixSumOddIndexArray[i - 1]) + (prefixSumEvenIndexArray[n - 1] - prefixSumEvenIndexArray[i]);
              if (evnSumIndex == oddSumIndex) {
                 count++;
             }
