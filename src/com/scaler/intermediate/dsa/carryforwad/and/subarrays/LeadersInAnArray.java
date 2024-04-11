@@ -1,4 +1,4 @@
-package com.scaler.intermediate.dsa.carryforwadandsubarrays;
+package com.scaler.intermediate.dsa.carryforwad.and.subarrays;
 
 import java.util.ArrayList;
 import java.util.Arrays;
@@ -77,7 +77,7 @@ public class LeadersInAnArray {
         list.add(3);
         list.add(5);
         list.add(2);
-        //System.out.println(solve(list));
-       // System.out.println(list);
+        System.out.println(solve(list));
+        //System.out.println(list);
     }
 }
