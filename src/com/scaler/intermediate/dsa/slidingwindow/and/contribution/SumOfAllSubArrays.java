@@ -4,8 +4,15 @@ package com.scaler.intermediate.dsa.slidingwindow.and.contribution;
  * Given arr[n], find the sum of total of all the possible subarrays.
  * (Sum of all subarray sums)
  *
+ * Note : Be careful of integer overflow issues while calculations.
+ * Use appropriate datatypes.
+ * Example Input : A = [1, 2, 3]
+ * Output : 20
+ *
+ * Explanation : The different subarrays for the given array are: [1], [2], [3], [1, 2], [2, 3], [1, 2, 3].
+ * Their sums are: 1 + 2 + 3 + 3 + 5 + 6 = 20
  */
-public class SumOfSubArrays {
+public class SumOfAllSubArrays {
     public static int calculateSumBruteForce(int[] A, int n){
         int totalSum = 0;
         for(int i = 0 ; i < n ;i++){
@@ -48,6 +55,7 @@ public class SumOfSubArrays {
         }
         return total;
     }
+
     public static void main(String[] args) {
         int[] A = {1,2,3};
         int n = A.length;
