@@ -27,41 +27,25 @@ public class SpecialSubsequencesAG {
         return count;
     }
 
-    public int solve(String A) {
+    public static int solve(String A) {
         int n = A.length();
         int answer = 0;
         int countOfA = 0;
-        double b = 10;
-        double e = 9;
-        int mod = (int)Math.pow(10,9)+7 ;
+
         for(int i = 0 ;i < n;i++){
             if(A.charAt(i) == 'A'){
                 countOfA++;
             } else if (A.charAt(i) == 'G') {
                 answer = answer + countOfA;
-                answer = answer % mod;
+                answer = answer % 1000000007;
             }
         }
         return answer;
     }
-    public static int count_ag(String A){
-        int n = A.length();
-        int result  = 0;
-        int countOfA = 0;
-        for (int i = 0;i < n;i++) {
-            if(A.charAt(i) == 'A'){
-                countOfA++;
-            } else if (A.charAt(i) == 'G') {
-                result = result + countOfA;
-                result = result % 1000000007;
-            }
-        }
-        return result;
-    }
 
     public static void main(String[] args) {
-        String s = "abegag";
+        String s = "ABCGAG";
         System.out.println(count_ag_brute(s));
-        System.out.println(count_ag(s));
+        System.out.println(solve(s));
     }
 }
