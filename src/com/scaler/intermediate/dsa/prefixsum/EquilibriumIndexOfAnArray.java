@@ -45,7 +45,8 @@ public class EquilibriumIndexOfAnArray {
             }
             //0,1,2,3,4,5..........i-1,i,i+1.......N-1
             //sum 0 to i - 1 and i + 1 to N - 1
-            //leftSum (i-1-0) ==> prefix(i-1) , rightSum = prefix[N-1] - prefix[i+1-1] => prefix[N-1] - prefix[i]
+            //leftSum (i-1-0) ==> prefix(i-1) ,
+            //rightSum = prefix[N-1] - prefix[i+1-1] => prefix[N-1] - prefix[i]
             long rightSum = prefixSumArray[n - 1] - prefixSumArray[i];
             if(leftSum == rightSum){
                return i;
