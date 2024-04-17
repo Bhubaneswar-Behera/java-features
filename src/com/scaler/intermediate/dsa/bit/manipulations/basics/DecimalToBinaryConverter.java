@@ -6,8 +6,8 @@ public class DecimalToBinaryConverter {
         int base = 1;
 
         while (n > 0) {
-            int remainder = n % 10;
-            n = n / 10;
+            int remainder = n % 2;
+            n = n / 2;
             answer = answer + base * remainder;
             base = base * 10;
         }
