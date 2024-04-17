@@ -3,7 +3,6 @@ package com.scaler.intermediate.dsa.arrays.introduction;
 public class ArrayReference {
     static void fun(int[]arr) {
         arr[3] = 98;
-        return;
     }
     public static void main(String[] args) {
         int[]arr = {10,20,30,40,50};
