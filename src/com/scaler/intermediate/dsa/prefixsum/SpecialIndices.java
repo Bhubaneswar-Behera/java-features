@@ -35,12 +35,21 @@ public class SpecialIndices {
         }
         int count = 0;
         for(int i = 0; i < n ;i++){
-            int evnSumIndex = 0;
+            int evenSumIndex = 0;
             int oddSumIndex = 0;
 
-            evnSumIndex = (i == 0 ? 0 : prefixSumEvenIndexArray[i - 1]) + (prefixSumOddIndexArray[n - 1] - prefixSumOddIndexArray[i]);
-            oddSumIndex = (i == 0 ? 0 : prefixSumOddIndexArray[i - 1]) + (prefixSumEvenIndexArray[n - 1] - prefixSumEvenIndexArray[i]);
-             if (evnSumIndex == oddSumIndex) {
+            if(i == 0){
+                evenSumIndex = 0;
+                oddSumIndex = 0;
+            } else {
+                evenSumIndex = prefixSumEvenIndexArray[i-1] + prefixSumOddIndexArray[n-1] - prefixSumOddIndexArray[i];
+                oddSumIndex = prefixSumOddIndexArray[i-1] + prefixSumEvenIndexArray[n-1] - prefixSumEvenIndexArray[i];
+            }
+
+            /*evenSumIndex = (i == 0 ? 0 : prefixSumEvenIndexArray[i - 1]) + (prefixSumOddIndexArray[n - 1] - prefixSumOddIndexArray[i]);
+            oddSumIndex = (i == 0 ? 0 : prefixSumOddIndexArray[i - 1]) + (prefixSumEvenIndexArray[n - 1] - prefixSumEvenIndexArray[i]);*/
+
+             if (evenSumIndex == oddSumIndex) {
                 count++;
             }
         }
