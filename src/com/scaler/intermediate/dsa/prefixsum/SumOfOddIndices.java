@@ -34,7 +34,7 @@ public class SumOfOddIndices {
             if(l == 0){
                 sum = prefixSumArray[r];
             } else  {
-                sum = prefixSumArray[r] + prefixSumArray[l - 1];
+                sum = prefixSumArray[r] - prefixSumArray[l - 1];
             }
             System.out.println("l-->" + l +" r-->" + r + " Odd index sum : " +sum);
         }
