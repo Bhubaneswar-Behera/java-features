@@ -95,7 +95,7 @@ public class Java8CommonProgrammingQA {
         Map<String, Double> averageRankOfFemaleStudents = studentList.stream().filter(e -> e.getGender().equalsIgnoreCase("Female"))
                 .collect(Collectors.groupingBy(Student::getDept, Collectors.averagingDouble(Student::getRank)));
 
-        System.out.println("Average Rank Of Female Female Students : "+averageRankOfFemaleStudents);
+        System.out.println("Average Rank Of Female Students : "+averageRankOfFemaleStudents);
 
     }
     public static void main(String[] args) {
