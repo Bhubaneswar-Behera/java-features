@@ -39,31 +39,8 @@ public class RainWaterTrapped {
         return max;
     }
 
-    public static int trap1(final int[] A) {
-        int n = A.length;
-        int[] leftMax = new int[n];
-        int[] rightMax = new int[n];
-        int max = 0;
-
-        leftMax[0] = A[0];
-        for (int i = 1; i < n ; i++) {
-            leftMax[i] = Math.max(A[i],leftMax[i-1]);
-        }
-
-        rightMax[n-1] = A[n-1];
-        for (int i = n-2; i >= 0 ; i--) {
-            rightMax[i] = Math.max(A[i],rightMax[i+1]);
-        }
-
-        for (int i = 0; i < n; i++) {
-            max = max + Math.min(leftMax[i],rightMax[i]) - A[i];
-        }
-
-        return max;
-    }
     public static void main(String[] args) {
         int[] A = {0, 1, 0, 2};
         System.out.println(trap(A));
-        System.out.println(trap1(A));
     }
 }
