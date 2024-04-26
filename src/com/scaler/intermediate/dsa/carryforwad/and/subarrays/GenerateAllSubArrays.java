@@ -32,7 +32,7 @@ public class GenerateAllSubArrays {
      * @return
      */
 
-    public static int[][] solve(int[] A) {
+    public static int[][] returnAllPossibleSubArrays(int[] A) {
         int n= A.length;
         int resultLength = n*(n+1)/2;
         int[][] result=new int[resultLength][];
@@ -49,20 +49,21 @@ public class GenerateAllSubArrays {
                 }
                 count++;
             }
-        } return result;
+        }
+        return result;
     }
 
 
     public static void main(String[] args) {
         int[] arr = {4,1,2,3,-1,6,9,8,12};
-        printAllSubArray(arr, arr.length);
+        //printAllSubArray(arr, arr.length);
 
 
         int[] arr1 = {36,63,63,26,87,28,77,93,7};
-        int[][] resultArray = solve(arr1);
+        int[][] resultArray = returnAllPossibleSubArrays(arr1);
 
         for (int[] a : resultArray) {
-            //System.out.println(Arrays.toString(a) + " ");
+            System.out.println(Arrays.toString(a) + " ");
         }
     }
 }
