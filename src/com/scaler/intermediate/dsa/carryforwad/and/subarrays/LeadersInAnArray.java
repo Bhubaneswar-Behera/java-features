@@ -38,7 +38,7 @@ public class LeadersInAnArray {
             int currentMax = A[i];
             if(currentMax > max){
                 result[count] =  A[i];
-                max = A[i];
+                max = currentMax;
                 count++;
             }
         }
