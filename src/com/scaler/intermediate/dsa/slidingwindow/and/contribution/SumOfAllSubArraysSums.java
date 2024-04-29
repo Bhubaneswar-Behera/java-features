@@ -12,7 +12,7 @@ package com.scaler.intermediate.dsa.slidingwindow.and.contribution;
  * Explanation : The different subarrays for the given array are: [1], [2], [3], [1, 2], [2, 3], [1, 2, 3].
  * Their sums are: 1 + 2 + 3 + 3 + 5 + 6 = 20
  */
-public class SumOfAllSubArrays {
+public class SumOfAllSubArraysSums {
     public static int calculateSumBruteForce(int[] A, int n){
         int totalSum = 0;
         for(int i = 0 ; i < n ;i++){
