@@ -47,13 +47,13 @@ public class RotateMatrix {
         }
 
         //reverse
-        for(int column = 0;column < n;column++){
+        for(int row = 0;row < n;row++){
            int i = 0;
            int j  = n - 1;
            while (i < j) {
-               int temp = result[column][i];
-               result[column][i] = result[column][j];
-               result[column][j] = temp;
+               int temp = result[row][i];
+               result[row][i] = result[row][j];
+               result[row][j] = temp;
                i++;
                j--;
            }
