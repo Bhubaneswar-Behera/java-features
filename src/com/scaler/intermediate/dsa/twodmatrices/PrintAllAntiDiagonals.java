@@ -62,9 +62,9 @@ public class PrintAllAntiDiagonals {
            System.out.println();
        }
 
-       for(int r = 1; r < n -1;r++){
+       for(int r = 1; r < n ;r++){
            int  i = r;
-           int j = m - 1;
+           int  j = m - 1;
            while (i < n && j >= 0) {
                System.out.print(A[i][j] + " ");
                i++;
