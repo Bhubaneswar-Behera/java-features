@@ -12,13 +12,13 @@ import java.util.Collections;
  * eg:
  * Input  : A {1,2,4}
  * Output : 11
- * Explanation :    2--> 2 +1 +4=7
- *                  1-->1+4=5        Cost = 7+5+4 = 16
- *                  4-->4
+ * Explanation :    2--> 2 + 1 + 4 = 7
+ *                  1--> 1 + 4 = 5        Cost = 7+5+4 = 16
+ *                  4--> 4
  *
- *                  4-->1+2+4=7
- *                  2-->1+2=3        Cost = 7 + 3 + 1 =11
- *                  1-->1
+ *                  4--> 1 + 2 + 4 = 7
+ *                  2--> 1 + 2 = 3        Cost = 7 + 3 + 1 =11
+ *                  1--> 1
  *
  */
 public class ElementsRemoval {
@@ -31,7 +31,7 @@ public class ElementsRemoval {
         //sorted descending order
         Arrays.sort(array,Collections.reverseOrder());
 
-        for (int i =0;i < n ;i++) {
+        for (int i = 0;i < n ;i++) {
             answer = answer + array[i] * (i + 1);
         }
        return answer;
