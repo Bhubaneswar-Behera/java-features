@@ -1,5 +1,7 @@
 package com.scaler.intermediate.dsa.prefixsum;
 
+import java.util.ArrayList;
+
 /**
  * You are given an array A of integers of size N.
  *Your task is to find the equilibrium index of the given array
@@ -56,8 +58,38 @@ public class EquilibriumIndexOfAnArray {
     }
 
 
+    public static int solve(ArrayList<Integer> A) {
+        int n = A.size();
+        ArrayList<Integer> prefixSum = new ArrayList<>();
+        prefixSum.add(A.get(0));
+        for(int i=1;i<n;i++){
+            int sum = prefixSum.get(i-1) + A.get(i);
+            prefixSum.add(sum);
+        }
+
+        for(int i=0;i<n;i++){
+            int sumTillHere = (i == 0) ? 0 : prefixSum.get(i - 1);
+            int sumFromElementToEnd = prefixSum.get(n - 1) - prefixSum.get(i);
+            if(sumTillHere == sumFromElementToEnd) {
+                return i;
+            }
+        }
+        return -1;
+    }
+
+
     public static void main(String[] args) {
         int[] A = {-7, 1, 5, 2, -4, 3, 0};
+        ArrayList<Integer> list = new ArrayList<>();
+        list.add(-7);
+        list.add(1);
+        list.add(5);
+        list.add(2);
+        list.add(-4);
+        list.add(3);
+        list.add(0);
+
         System.out.println(solve(A));
+        System.out.println(solve(list));
     }
 }
