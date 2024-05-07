@@ -15,6 +15,8 @@ package com.scaler.advanced.dsa.module4.arrays.two.dimensional;
  * Total Sum = 4+8+4 = 16
  */
 public class SumOfAllSubMatrices {
+
+    //Contribution Technique
     public static int solve(int[][] A) {
         int answer = 0;
         int n = A.length;
