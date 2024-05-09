@@ -23,8 +23,26 @@ public class SingleNumber {
 
         return xor;
     }
+    public static int singleNumber1(final int[] A) {
+        int n = A.length;
+        int answer = 0;
+        for (int i = 0; i < 32 ; i++) {
+            int count = 0;
+            for (int j = 0; j < n ; j++) {
+                if((A[j] & (1<<i)) > 0){
+                    count++;
+                }
+            }
+            if ((count & 1) == 1) {
+                answer = answer | (1<<i);
+            }
+        }
+
+        return answer;
+    }
     public static void main(String[] args) {
         int[] A = {1, 2, 2, 3, 1};
         System.out.println(singleNumber(A));
+        System.out.println(singleNumber1(A));
     }
 }
