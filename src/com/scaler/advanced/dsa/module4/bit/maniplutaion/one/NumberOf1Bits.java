@@ -35,6 +35,8 @@ public class NumberOf1Bits {
         return false;
     }
     public static void main(String[] args) {
-
+        int A = 11;
+        System.out.println(numSetBitsApproach1(A));
+        System.out.println(numSetBitsApproach2(A));
     }
 }
