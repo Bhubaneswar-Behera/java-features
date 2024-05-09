@@ -32,13 +32,15 @@ public class SingleNumberIII {
         //Step 3. Diffferentiate on the basis of whether bit is set or unset
         int set=0,unset=0;
         for(int i=0;i<n;i++){
-            if((A[i] &(1<<pos))>0){
+            if(checkBits(A[i],pos)){
                 set=set^A[i];
             }
             else{
                 unset=unset^A[i];
             }
         }
+        System.out.println(set);
+        System.out.println(unset);
         int[] ans=new int[2];
         if(unset> set){
             ans[0]=set;
@@ -61,6 +63,7 @@ public class SingleNumberIII {
     public static void main(String[] args) {
         int[] A = {186,256,102,377,186,377};
         int[] result = solve(A);
+        System.out.println("######################");
         for(int a : result){
             System.out.println(a+ " ");
         }
