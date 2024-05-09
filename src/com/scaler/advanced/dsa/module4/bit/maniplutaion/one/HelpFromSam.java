@@ -34,8 +34,19 @@ public class HelpFromSam {
         }
         return count;
     }
+    public static int solve2(int A){
+        int answer = 0;
+        for (int i = 0; i < 32 ; i++) {
+            if((A & (1<<i)) !=0 ) {
+                answer++;
+            }
+        }
+        return answer;
+    }
     public static void main(String[] args) {
         int A = 5;
         System.out.println(solve(A));
+        int B = 17;
+        System.out.println(solve2(B));
     }
 }
