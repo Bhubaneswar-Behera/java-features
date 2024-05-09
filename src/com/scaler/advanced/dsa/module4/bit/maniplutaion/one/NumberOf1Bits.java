@@ -21,7 +21,7 @@ public class NumberOf1Bits {
     public static int numSetBitsApproach2(int A) {
         int answer = 0;
         while (A > 0) {
-            if((A >> 1) == 1){
+            if((A & 1) > 0){
                 answer++;
             }
             A = A>>1;
