@@ -13,13 +13,13 @@ package com.scaler.advanced.dsa.module4.recursion.one;
  */
 public class FindFibonacci_II {
     public static int findAthFibonacci(int A) {
-        if(A == 0 || A == 1){
+        if(A <= 1){
             return A;
         }
         return findAthFibonacci(A-1) + findAthFibonacci(A-2);
     }
     public static void main(String[] args) {
-        int n = 1;
+        int n = 7;
         System.out.println(findAthFibonacci(n));
     }
 }
