@@ -9,8 +9,8 @@ package com.scaler.advanced.dsa.module4.recursion.one;
 public class FindFactorial {
 
     public static int factorial(int A) {
-        if(A == 1){
-            return A;
+        if(A == 0){
+            return 1;
         }
         return factorial(A - 1) * A;
     }
