@@ -59,13 +59,7 @@ public class LeadersInAnArray {
         }
         return resultList;
     }
-    public static int max(int[] A){
-        int max = Integer.MIN_VALUE;
-        for(int a: A){
-            max = Math.max(max,a);
-        }
-        return max;
-    }
+
     public static void main(String[] args) {
         int[] A = {16, 17, 4, 3, 5, 2};
         System.out.println(Arrays.toString(solve(A)));
