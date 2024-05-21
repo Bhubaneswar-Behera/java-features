@@ -1,4 +1,4 @@
-package com.designpatterns.facade.thirdparty;
+package com.designpatterns.structural.facade.thirdparty;
 
 public abstract class CryptoService {
 

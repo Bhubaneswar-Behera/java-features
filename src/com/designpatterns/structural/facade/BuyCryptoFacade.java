@@ -1,6 +1,6 @@
-package com.designpatterns.facade;
+package com.designpatterns.structural.facade;
 
-import com.designpatterns.facade.thirdparty.*;
+import com.designpatterns.structural.facade.thirdparty.*;
 
 public class BuyCryptoFacade {
 

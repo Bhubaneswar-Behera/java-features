@@ -1,4 +1,4 @@
-package com.designpatterns.facade;
+package com.designpatterns.structural.facade;
 
 /*
  * Video Reference: https://youtu.be/xWk6jvqyhAQ
