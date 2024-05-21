@@ -36,7 +36,7 @@ public class SortedPermutationRank {
                 }
             }
             answer = answer + (count*factorial(n-i-1)) % 1000003;
-            answer = answer + 1000003;
+            answer = answer % 1000003;
         }
         return answer+1;
     }
