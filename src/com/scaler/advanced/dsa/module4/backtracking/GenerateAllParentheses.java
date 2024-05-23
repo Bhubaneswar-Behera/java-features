@@ -28,7 +28,7 @@ public class GenerateAllParentheses {
     }
 
     private static void solve(int N ,int openIndex, int closedIndex, String str) {
-        if(openIndex == closedIndex && closedIndex == N){
+        if(openIndex + closedIndex == 2*N){
             arrayList.add(str);
             return ;
         }
@@ -48,7 +48,7 @@ public class GenerateAllParentheses {
        int index = opening + closing;
 
        if(index == 2 * n){
-           System.out.println(str);
+           System.out.print(str);
        }
 
        if(opening > closing){
@@ -67,8 +67,9 @@ public class GenerateAllParentheses {
     }
     public static void main(String[] args) {
         int n = 3;
-        //solve(n);
-        //System.out.println(Arrays.toString(solve(n)));
+        solve(n);
+        System.out.println();
+        System.out.println("########################################");
         System.out.println(generateParenthesis(n));
     }
 }
