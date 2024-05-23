@@ -21,14 +21,19 @@ public class ImplementPowerFunction {
         if(B == 0){
             return 1;
         }
-        long result = pow(A,B/2,C);
-        result = (result * result) % C;
+        long halfPower = pow(A,B/2,C);
+        long answer = (halfPower * halfPower) % C;
 
-        if(B % 2 == 1){
-            result = result * A;
+        if (B % 2 == 0) {
+            return (int)answer;
+        } else{
+            answer = (int)(answer % C * A % C) % C;
+            if(answer < 0){
+                answer = answer + C;
+            }
         }
-        result = (result + C) % C;
-        return (int) result;
+
+        return (int) answer;
     }
 
 
