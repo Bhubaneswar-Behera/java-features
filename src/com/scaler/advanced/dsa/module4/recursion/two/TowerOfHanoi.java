@@ -30,6 +30,16 @@ import java.util.ArrayList;
  * moves to move all disks from the first to the third tower.
  */
 public class TowerOfHanoi {
+
+    public static void printTowerOfHanoi(int A, char source,char auxilary ,  char destination){
+        if (A == 0) {
+            return;
+        }
+        printTowerOfHanoi(A - 1 , source,auxilary,destination);
+        System.out.println(source + "-->"+destination);
+        printTowerOfHanoi(A-1 , auxilary,source,destination);
+
+    }
     public static ArrayList<ArrayList<Integer>> towerOfHanoi(int A) {
         ArrayList<ArrayList<Integer>> ans = new ArrayList<>();
         tower(A,1,2,3,ans);
@@ -51,5 +61,8 @@ public class TowerOfHanoi {
     public static void main(String[] args) {
         int N = 2;
         System.out.println(towerOfHanoi(N));
+        System.out.println("###########################################################");
+        int number = 3;
+        printTowerOfHanoi(number,'A','B','C');
     }
 }
