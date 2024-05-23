@@ -36,7 +36,7 @@ public class GenerateAllParentheses {
         if(openIndex < N){
             solve(N, openIndex + 1, closedIndex, str + "(");
         }
-        if(closedIndex < openIndex){
+        if(openIndex > closedIndex){
             solve(N, openIndex, closedIndex + 1, str + ")");
         }
         return;
