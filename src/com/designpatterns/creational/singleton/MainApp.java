@@ -1,9 +1,9 @@
 package com.designpatterns.creational.singleton;
 
+/*
+ * Video Reference: https://youtu.be/tSZn4wkBIu8
+ */
 public class MainApp {
-    /*
-     * Video Reference: https://youtu.be/tSZn4wkBIu8
-     */
     public static void main(String[] args) {
 
         System.out.println(Singleton.getInstance("Geekific"));
