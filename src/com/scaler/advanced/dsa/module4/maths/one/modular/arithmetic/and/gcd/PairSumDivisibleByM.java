@@ -20,10 +20,10 @@ public class PairSumDivisibleByM {
         int count = 0;
 
         for (int i = 0; i < n; i++) {
-            int V = A[i] % B;
-            int P = (B- V) % B;
-            count = (count + frequency[P]) % 1000000007;
-            frequency[V]++;
+            int value = A[i] % B;
+            int partner = (B - value) % B;
+            count = (count + frequency[partner]) % 1000000007;
+            frequency[value]++;
         }
 
         return count;
