@@ -21,15 +21,18 @@ package com.scaler.advanced.dsa.module4.maths.two.combinatorics.basics;
 public class ConsecutiveNumbersSum {
     public static int solve(int A) {
         int answer = 0;
-
-        for (int i = 1; i < Math.sqrt(2*A) ; i++) {
-            int T = A - (i*(i-1))/2;
-            if(T % i == 0){
-                answer++;
+        // start with 1 consecutive number then 2 consecutive number then 3 consecutive numbers....likewise
+        // so we loop till sum of n consecutive numbers is less than or equal to A
+        for (int n = 1; (n *(n+1)/2) <= A  ; n++) {
+            // we will increase the count of the ans by 1....when ->
+            // ( A - sum of n consecutives ) % n == 0 --> then only there will exist a way...{ a way
+            // by which sum of those consecutive numbers will be = A }
+            if((A - (n*(n+1)/2)) % n == 0){
+            answer++;
             }
         }
 
-         return answer;
+        return answer;
     }
     public static void main(String[] args) {
         int A = 5;
