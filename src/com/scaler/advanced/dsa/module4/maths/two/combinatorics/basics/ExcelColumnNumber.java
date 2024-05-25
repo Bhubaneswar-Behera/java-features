@@ -34,7 +34,7 @@ public class ExcelColumnNumber {
         int answer = 0;
         int multiply = 1;
 
-        for (int i = n -1 ; i >= 0; i--) {
+        for (int i = n - 1 ; i >= 0; i--) {
             answer = answer + multiply * (A.charAt(i) - 'A' + 1);
             multiply = multiply * 26;
         }
