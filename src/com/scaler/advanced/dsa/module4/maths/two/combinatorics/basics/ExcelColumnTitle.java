@@ -33,7 +33,7 @@ public class ExcelColumnTitle {
         while (A > 0) {
             A = A - 1;
             answer = (char) (A % 26 + 'A') + answer;
-            A =  A/ 26;
+            A =  A / 26;
         }
 
         return answer;
