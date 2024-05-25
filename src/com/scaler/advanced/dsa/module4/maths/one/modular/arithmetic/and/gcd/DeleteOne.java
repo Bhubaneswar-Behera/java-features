@@ -36,13 +36,13 @@ public class DeleteOne {
         suffixGcd[n - 1] = A.get(n - 1);
 
 
-        // Calculate prefix array
+        // Calculate prefixGcd array
         for (int i = 1; i < n; i++) {
             prefixGcd[i] = gcd(prefixGcd[i - 1], A.get(i));
         }
 
-        // Calculate suffix array
-        for (int i = n -2 ; i >= 0 ; i--) {
+        // Calculate suffixGcd array
+        for (int i = n - 2 ; i >= 0 ; i--) {
             suffixGcd[i] = gcd(suffixGcd[i+1], A.get(i));
         }
 
