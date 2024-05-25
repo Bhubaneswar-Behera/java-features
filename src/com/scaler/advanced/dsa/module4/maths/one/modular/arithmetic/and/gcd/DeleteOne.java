@@ -49,15 +49,15 @@ public class DeleteOne {
         int answer = Integer.MIN_VALUE;
 
         for (int i = 0; i < n ; i++) {
-            int gcdNum = 0;
+            int currentGcd = 0;
             if (i == 0) {
-                gcdNum = suffixGcd[i+1];
+                currentGcd = suffixGcd[i+1];
             } else if (i == n - 1) {
-                gcdNum = prefixGcd[i - 1];
+                currentGcd = prefixGcd[i - 1];
             } else {
-                gcdNum = gcd(prefixGcd[i - 1], suffixGcd[i + 1]);
+                currentGcd = gcd(prefixGcd[i - 1], suffixGcd[i + 1]);
             }
-            answer = Math.max(answer, gcdNum);
+            answer = Math.max(answer, currentGcd);
         }
 
 
@@ -73,8 +73,10 @@ public class DeleteOne {
 
         return gcd(B,A % B);
     }
+
+
+
     public static void main(String[] args) {
-        //int[] A = {12, 15, 18};
 
         ArrayList<Integer> A = new ArrayList<>();
         A.add(12);
