@@ -34,21 +34,6 @@ public class ComputeNCRModm {
         return answer[A][B];
     }
 
-    public static int compute(int A , int B){
-       int[][] C = new int[A+1][B+1];
-
-
-        for (int i = 0; i <= A ; i++) {
-            for (int j = 0;  j <= Math.min(i,B); j++) {
-                if (j == 0 || j == i) {
-                    C[i][j] = 1;
-                } else{
-                    C[i][j] = C[i-1][j-1] + C[i-1][j];
-                }
-            }
-        }
-        return C[A][B];
-    }
     public static void main(String[] args) {
         int A = 5;
         int B = 2;
