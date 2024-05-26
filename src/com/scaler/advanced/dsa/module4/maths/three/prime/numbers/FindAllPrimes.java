@@ -32,12 +32,7 @@ public class FindAllPrimes {
         return resultList;
     }
 
-    public static ArrayList<Integer> solveUsingSieveOfEratothenes(int A) {
-        ArrayList<Integer> resultList = new ArrayList<>();
 
-        return resultList;
-
-    }
     public static void printAllPrimeNumbers(int A){
         for (int i = 2; i<= A ; i++) {
             boolean isPrime = true;
@@ -83,8 +78,6 @@ public class FindAllPrimes {
 
         System.out.println();
 
-        //System.out.println(solve(n));
-        //System.out.println(solveUsingSieveOfEratothenes(n));
 
     }
 }
