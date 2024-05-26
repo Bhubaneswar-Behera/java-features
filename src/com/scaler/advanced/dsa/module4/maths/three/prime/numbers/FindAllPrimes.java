@@ -57,7 +57,7 @@ public class FindAllPrimes {
 
         for (int i = 2; i * i <= A ; i++) {
             if (isPrime[i]) {
-                for (int j = 2 * i; j <= A ; j = j + i) {
+                for (int j = i * i; j <= A ; j = j + i) {
                         isPrime[j] = false;
                 }
             }
