@@ -18,7 +18,7 @@ public class PrimeFactorization {
                 n = n / s;
                 count++;
             }
-            answer = answer * (count+1);
+            answer = answer * (count + 1);
             s = smallestPrimeFactor(n)[n];
         }
 
