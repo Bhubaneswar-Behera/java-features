@@ -35,10 +35,10 @@ public class PrimeSum {
         ArrayList<Integer> answer = new ArrayList<>();
         for(int i=2;i<isPrimes.length-1;i++)
         {
-            if(isPrimes[i] && isPrimes[isPrimes.length-1-i])
+            if(isPrimes[i] && isPrimes[A-i])
             {
                 answer.add(i);
-                answer.add(isPrimes.length-1-i);
+                answer.add(A-i);
                 break;
             }
         }
