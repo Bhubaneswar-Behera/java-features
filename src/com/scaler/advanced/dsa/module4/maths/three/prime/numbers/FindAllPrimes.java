@@ -32,6 +32,27 @@ public class FindAllPrimes {
         return resultList;
     }
 
+    public static int[] findAllPrimes(int A) {
+        int[] result = new int[A];
+        int count = 0;
+
+        for (int i = 2; i <= A ; i++) {
+            boolean isPrime = true;
+            for (int j = 2; j * j <= i ; j++) {
+                if (i % j == 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+            if (isPrime) {
+                result[count] = i;
+                count++;
+
+            }
+        }
+        return Arrays.copyOfRange(result,0,count);
+    }
+
 
     public static void printAllPrimeNumbers(int A){
         for (int i = 2; i<= A ; i++) {
@@ -76,6 +97,8 @@ public class FindAllPrimes {
         System.out.println();
         printAllPrimeNumbersUsingSieveOfEratothenes(n);
 
+        System.out.println();
+        System.out.println(Arrays.toString(findAllPrimes(n)));
         System.out.println();
 
 
