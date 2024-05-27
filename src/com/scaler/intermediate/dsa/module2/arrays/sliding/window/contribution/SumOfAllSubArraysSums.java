@@ -39,14 +39,7 @@ public class SumOfAllSubArraysSums {
         return totalSum;
     }
 
-    public static int calculateSumContributionTechnique(int[] A, int n){
-        int totalSum = 0;
-        for (int i = 0;i< n;i++) {
-            totalSum = totalSum + A[i]*(i+1) * (n-i);
-        }
-        return totalSum;
-    }
-    public long subarraySum(int[] A) {
+    public static long calculateSumContributionTechnique(int[] A) {
         int n = A.length;
         long total = 0;
 
@@ -61,7 +54,7 @@ public class SumOfAllSubArraysSums {
         int n = A.length;
         System.out.println(calculateSumBruteForce(A, n));
         System.out.println(calculateSumCarryForward(A, n));
-        System.out.println(calculateSumContributionTechnique(A, n));
+        System.out.println(calculateSumContributionTechnique(A));
 
     }
 }
