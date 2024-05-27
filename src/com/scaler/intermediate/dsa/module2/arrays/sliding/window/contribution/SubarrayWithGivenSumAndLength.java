@@ -21,13 +21,13 @@ public class SubarrayWithGivenSumAndLength {
         int n = A.length;
         long sum = 0;
         for(int i = 0;i < B;i++){
-            sum=sum+A[i];
+            sum = sum + A[i];
         }
         if(sum == C){
             return 1;
         }
         for(int i = 1 ;i < n - B ;i++ ){
-            int j = i + B-1;
+            int j = i + B - 1;
             sum = sum + A[j] - A[i-1];
             if(sum == C){
                 return 1;
