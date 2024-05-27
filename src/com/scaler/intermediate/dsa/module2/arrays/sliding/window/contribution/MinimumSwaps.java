@@ -29,7 +29,7 @@ public class MinimumSwaps {
         }
         if(goodNumbers <= 1){
             return 0;
-        } else{
+        } else {
             int l = 0;
             int r = 0;
             int badNumbersInCurrentWindow = 0;
