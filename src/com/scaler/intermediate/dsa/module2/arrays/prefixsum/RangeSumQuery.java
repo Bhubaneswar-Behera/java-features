@@ -1,8 +1,6 @@
-package com.scaler.intermediate.dsa.prefixsum;
+package com.scaler.intermediate.dsa.module2.arrays.prefixsum;
 
-import java.util.ArrayList;
 import java.util.Arrays;
-import java.util.List;
 
 /**
  * You are given an integer array A of length N.

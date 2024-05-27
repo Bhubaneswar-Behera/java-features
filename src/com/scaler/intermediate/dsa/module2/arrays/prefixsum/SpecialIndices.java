@@ -1,4 +1,4 @@
-package com.scaler.intermediate.dsa.prefixsum;
+package com.scaler.intermediate.dsa.module2.arrays.prefixsum;
 
 /**
  * Given an Array of size n, count the number of special indices in the array.

@@ -1,4 +1,4 @@
-package com.scaler.intermediate.dsa.module2.sliding.window.contribution;
+package com.scaler.intermediate.dsa.module2.arrays.sliding.window.contribution;
 
 /**
  * Given an array of integers A, a subarray of an array

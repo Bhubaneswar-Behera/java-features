@@ -1,4 +1,4 @@
-package com.scaler.intermediate.dsa.module2.sliding.window.contribution;
+package com.scaler.intermediate.dsa.module2.arrays.sliding.window.contribution;
 
 /**
  * Given arr[n], find the sum of total of all the possible subarrays.

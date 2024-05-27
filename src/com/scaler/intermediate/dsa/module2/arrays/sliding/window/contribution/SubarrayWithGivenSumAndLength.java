@@ -1,4 +1,4 @@
-package com.scaler.intermediate.dsa.module2.sliding.window.contribution;
+package com.scaler.intermediate.dsa.module2.arrays.sliding.window.contribution;
 
 /**
  * Given an array A of length N. Also given are integers B and C.

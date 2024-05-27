@@ -1,4 +1,4 @@
-package com.scaler.intermediate.dsa.arrays.introduction;
+package com.scaler.intermediate.dsa.module2.arrays.introduction;
 
 import java.util.ArrayList;
 import java.util.Collections;

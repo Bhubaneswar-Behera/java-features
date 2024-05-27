@@ -1,4 +1,4 @@
-package com.scaler.intermediate.dsa.prefixsum;
+package com.scaler.intermediate.dsa.module2.arrays.prefixsum;
 
 /**
  * Given n elements and q queries. for each query,
