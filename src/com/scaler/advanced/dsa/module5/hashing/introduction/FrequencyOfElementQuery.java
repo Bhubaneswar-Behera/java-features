@@ -24,9 +24,9 @@ public class FrequencyOfElementQuery {
     public static int[] solve(int[] A, int[] B) {
         int n = A.length;
         int q = B.length;;
+
         Map<Integer,Integer> hasMap = new HashMap<>();
         int[] result = new int[q];
-        int count = 0;
 
         for (int i = 0; i < n ; i++) {
             hasMap.put(A[i],hasMap.getOrDefault(A[i] , 0)+1);
@@ -35,7 +35,6 @@ public class FrequencyOfElementQuery {
         for (int i = 0; i < q; i++) {
             if (hasMap.containsKey(B[i])) {
                 result[i] = hasMap.get(B[i]);
-
             }else{
                 result[i] = 0;
             }
