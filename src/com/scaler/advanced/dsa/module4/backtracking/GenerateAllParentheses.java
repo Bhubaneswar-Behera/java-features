@@ -21,7 +21,7 @@ public class GenerateAllParentheses {
     static ArrayList<String> arrayList;
     public static ArrayList<String> generateParenthesis(int A) {
 
-       arrayList = new ArrayList<String>();
+       arrayList = new ArrayList<>();
         String str = "";
         solve(A , 0,0,str);
         return arrayList;
