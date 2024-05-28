@@ -1,5 +1,9 @@
 package com.scaler.advanced.dsa.module4.recursion.one;
 
+/**
+ * What will be the output of following program ?
+ *
+ */
 public class SimpleRecursion {
     public static int bar(int x , int y){
         if(y== 0){
