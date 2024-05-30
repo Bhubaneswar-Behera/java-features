@@ -30,12 +30,12 @@ public class SortedPermutationRank {
 
         for (int i = 0; i < n -1 ; i++) {
             int count = 0;
-            for (int j = i+1; j < n ; j++) {
+            for (int j = i + 1; j < n ; j++) {
                 if (A.charAt(j) < A.charAt(i)) {
                     count++;
                 }
             }
-            answer = answer + (count*factorial(n-i-1)) % 1000003;
+            answer = answer + (count * factorial(n - i -1)) % 1000003;
             answer = answer % 1000003;
         }
         return answer+1;
