@@ -35,8 +35,6 @@ public class FrequencyOfElementQuery {
         for (int i = 0; i < q; i++) {
             if (hasMap.containsKey(B[i])) {
                 result[i] = hasMap.get(B[i]);
-            }else {
-                result[i] = 0;
             }
         }
         return result;
