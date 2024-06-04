@@ -24,6 +24,7 @@ public class CountDistinctElements {
         for (int i = 0; i < n ; i++) {
             set.add(A[i]);
         }
+        System.out.println("Distinct elements are : "+set);
         return set.size();
     }
     public static void main(String[] args) {
