@@ -16,6 +16,18 @@ import java.util.Set;
  */
 public class CheckPairSum {
 
+    public static int solveBruteForce(int A, int[] B) {
+        int n = B.length;
+        for (int i = 0; i < n ; i++) {
+            for (int j = i+1; j < n ; j++) {
+                if (B[i] + B[j] == A) {
+                    return 1;
+                }
+            }
+        }
+        return 0;
+    }
+
     public static int solve(int A, int[] B) {
         int n = B.length;
         Set<Integer> hasSet = new HashSet<>();
@@ -30,6 +42,7 @@ public class CheckPairSum {
     public static void main(String[] args) {
         int A = 8;
         int[] B = {3, 5, 1, 2, 1, 2};
+        System.out.println(solveBruteForce(A,B));
         System.out.println(solve(A,B));
     }
 }
