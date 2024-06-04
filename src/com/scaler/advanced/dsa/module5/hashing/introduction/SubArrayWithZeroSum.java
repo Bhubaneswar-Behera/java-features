@@ -13,7 +13,7 @@ import java.util.Set;
  * Input : A = [4, -1, 1]   Output : 1
  * Explanation : The subarray [-1, 1] has sum 0.
  */
-public class SubArrayWith0Sum {
+public class SubArrayWithZeroSum {
     public static int solve(int[] A) {
         // Just write your code below to complete the function. Required input is available to you as the function arguments.
         // Do not print the result or any output. Just return the result via this function.
