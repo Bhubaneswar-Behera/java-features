@@ -26,9 +26,8 @@ public class SubArrayWithZeroSum {
             sum = sum + A[i];
             if (sum == 0 || hashSet.contains(sum)) {
                 return 1;
-            } else{
-                hashSet.add(sum);
             }
+            hashSet.add(sum);
         }
         return 0;
     }
