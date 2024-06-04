@@ -40,6 +40,7 @@ public class CommonElements {
             if (hashMap.containsKey(B[i]) && hashMap.get(B[i]) > 0){
                    list.add(B[i]);
                    hashMap.put(B[i],hashMap.get(B[i]) - 1);
+                   //hashMap.replace(B[i],hashMap.get(B[i]) - 1);
 
             }
         }
