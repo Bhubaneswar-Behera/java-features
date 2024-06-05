@@ -25,6 +25,9 @@ public class LongestSubarrayZeroSum {
         hasMap.put(sum , -1);
         for (int i = 0; i < n ; i++) {
             sum = sum + A[i];
+            if(sum==0) {
+                answer = i + 1;
+            }
             if(hasMap.containsKey(sum)){
                 answer = Math.max(answer , i - hasMap.get(sum));
             } else {
