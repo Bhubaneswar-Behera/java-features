@@ -30,12 +30,12 @@ public class CheckPairSum {
 
     public static int solve(int A, int[] B) {
         int n = B.length;
-        Set<Integer> hasSet = new HashSet<>();
+        Set<Integer> hashSet = new HashSet<>();
         for (int i = 0; i < n ; i++) {
-            if (hasSet.contains(A - B[i])) {
+            if (hashSet.contains(A - B[i])) {
                 return 1;
             }
-            hasSet.add(B[i]);
+            hashSet.add(B[i]);
         }
         return 0;
     }
