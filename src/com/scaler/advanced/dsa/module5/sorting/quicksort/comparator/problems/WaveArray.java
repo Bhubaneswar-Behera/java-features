@@ -23,6 +23,7 @@ public class WaveArray {
     public static int[] wave(int[] A) {
         int n = A.length;
         Arrays.sort(A);
+        //swap alternate values of array for
         for (int i = 0; i < n - 1 ; i = i + 2) { // have to swap adjacent elems so +2
             int temp = A[i];
             A[i] = A[i+1];
