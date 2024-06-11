@@ -24,6 +24,16 @@ public class FindAPeakElement {
         int l = 0;
         int h = n - 1;
 
+        if(n==1){
+            return A[0];
+        }
+        if(A[0]>A[1]){
+            return A[0];
+        }
+        if(A[n-1]>=A[n-2]){
+            return A[n-1];
+        }
+
         while (l <= h){
             int mid = l + (h-l)/2;
             if ((mid == 0 || A[mid] > A[mid - 1])
@@ -38,7 +48,7 @@ public class FindAPeakElement {
         return -1;
     }
     public static void main(String[] args) {
-        int[] A = {1, 2, 3, 4, 5};
+        int[] A = {5, 17, 100, 11};
         System.out.println(solve(A));
     }
 }
