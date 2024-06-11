@@ -26,10 +26,7 @@ public class SearchForARange {
         int l = 0;
         int h = n - 1;
         int mid = 0;
-        int[] answer = new int[2];
-        answer[0] = -1;
-        answer[1] = -1;
-
+        int[] answer = {-1,-1};
 
         //leftIndex
         while (l <= h) {
