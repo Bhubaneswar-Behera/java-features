@@ -1,5 +1,6 @@
 package com.scaler.advanced.dsa.module5.searching.three.binary.search.on.answer;
 
+import java.util.ArrayList;
 import java.util.Arrays;
 
 /**
@@ -33,9 +34,9 @@ public class PaintersPartitionProblem {
         long sum = Arrays.stream(C).sum();
         long max = getMax(C);
 
-        int answer = -1;
-        long high = sum*B;
-        long low = max*B;
+        int answer = 0;
+        long high = sum * B;
+        long low = max * B;
         while(low <= high){
             long mid = (low + high)/2;
             int painters = (int) numberOfPainters(C, B, mid);
@@ -50,19 +51,18 @@ public class PaintersPartitionProblem {
         return  answer % 10000003;
     }
     private static long numberOfPainters(int[] C, long B, long mid){
-        long numberOfPainters = 1;
-        long timeLeft = mid;
-        for(int i = 0; i < C.length; i++){
-            long timeRequired = C[i]*B;
-            if( timeRequired > mid) return -1;
-            if(timeRequired <= timeLeft){
-                timeLeft = timeLeft - timeRequired;
-            } else {
-                numberOfPainters++;
-                timeLeft = mid - timeRequired;
+        long sum=(long)C[0]*B;
+        long ans=1;
+        for(int i=1;i < C.length;i++)
+        {
+            sum=sum+(long)C[i]*B;
+            if(sum>mid)
+            {
+                ans++;
+                sum=(long)C[i]*B;
             }
         }
-        return numberOfPainters;
+        return ans;
     }
 
     public static int getMax(int[] A){
@@ -72,11 +72,75 @@ public class PaintersPartitionProblem {
         }
         return max;
     }
+
+
+    public static int paint(int A, int B, ArrayList<Integer> C) {
+        int n=C.size();
+        long l=getMax(C)*B;
+        long h=getSum(C)*B;
+        long ans=0;
+        long mid=0;
+        while(l<=h)
+        {
+            mid=l+(h-l)/2;
+            if(countNoOfPainters(mid,C,B)<=A)
+            {
+                ans=(int)(mid%10000003);
+                h = mid - 1;
+            }
+            else
+            {
+                l = mid + 1;
+            }
+        }
+        return (int)ans%10000003;
+
+    }
+    static long countNoOfPainters(long mid,ArrayList<Integer> A,int B)
+    {
+        long sum = (long)A.get(0)*B;
+        long ans = 1;
+        for(int i = 1;i<A.size();i++)
+        {
+            sum=sum+(long)A.get(i)*B;
+            if(sum>mid)
+            {
+                ans++;
+                sum=(long)A.get(i)*B;
+            }
+        }
+        return ans;
+    }
+   static long getSum(ArrayList<Integer> A)
+    {
+        long sum=0;
+        for(int i:A)
+        {
+            sum+=i;
+        }
+        return sum;
+    }
+    static long getMax(ArrayList<Integer> A)
+    {
+        long max=Integer.MIN_VALUE;
+        for(int i:A)
+        {
+            max=Math.max(max,i);
+        }
+        return max;
+    }
+
+
     public static void main(String[] args) {
         //Input
         int A = 2;
         int B = 5;
         int[] C = {1, 10};
         System.out.println(paint(A,B,C));
+
+        ArrayList<Integer> integerArrayList = new ArrayList<>();
+        integerArrayList.add(1);
+        integerArrayList.add(10);
+        System.out.println(paint(A,B,integerArrayList));
     }
 }
