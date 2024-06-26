@@ -3,6 +3,8 @@ package com.scaler.advanced.dsa.module4.arrays.one.dimensional;
 import java.util.Arrays;
 
 /**
+ * Company  : Google
+ *
  * There are A beggars sitting in a row outside a temple.
  * Each beggar initially has an empty pot.
  * When the devotees come to the temple, they donate some amount of coins to these beggars.
@@ -56,6 +58,7 @@ public class ContinuousSumQuery {
             int r = B[i][1] - 1;
             int val = B[i][2];
             array[l] = array[l] + val;
+
             if ((r+1) < n  ) {
                 array[r + 1] = array[r+1] - val;
             }
