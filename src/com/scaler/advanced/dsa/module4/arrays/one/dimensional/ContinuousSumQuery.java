@@ -30,12 +30,34 @@ public class ContinuousSumQuery {
         int q = B.length;
 
         for (int i = 0; i < q; i++) {
-            int l = B[i][0]-1;
-            int r = B[i][1]-1;
+            int l = B[i][0] - 1;
+            int r = B[i][1] - 1;
             int x = B[i][2];
             array[l] = array[l] + x;
             if (r < n - 1 ) {
                 array[r + 1] = array[r+1] - x;
+            }
+        }
+
+        for (int i = 1; i < n; i++) {
+            array[i] = array[i] + array[i - 1];
+        }
+
+        return array;
+    }
+
+    public static int[] solve1(int A, int[][] B) {
+        int[] array = new int[A];
+        int n = array.length;
+        int q = B.length;
+
+        for (int i = 0; i < q; i++) {
+            int l = B[i][0] - 1;
+            int r = B[i][1] - 1;
+            int val = B[i][2];
+            array[l] = array[l] + val;
+            if ((r+1) < n  ) {
+                array[r + 1] = array[r+1] - val;
             }
         }
 
@@ -52,5 +74,6 @@ public class ContinuousSumQuery {
         int A = 5 ;
         int[][] B = {{1, 2, 10}, {2, 3, 20}, {2, 5, 25}};
         System.out.println(Arrays.toString(solve(A,B)));
+        System.out.println(Arrays.toString(solve1(A,B)));
     }
 }
