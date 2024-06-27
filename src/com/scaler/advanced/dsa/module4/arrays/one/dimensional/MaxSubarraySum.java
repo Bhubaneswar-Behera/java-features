@@ -10,8 +10,24 @@ package com.scaler.advanced.dsa.module4.arrays.one.dimensional;
  * Explanation : 3+4+(-1)+5 = 11
  *
  */
-public class MaxSumContiguousSubarray {
-    public static int maxSumContributionTechnique(int[] A,int n){
+public class MaxSubarraySum {
+
+    public static int maxSumSubArrayBruteForce(int[] A,int n){
+        int maxSum = Integer.MIN_VALUE;
+
+        for (int i = 0; i < n ; i++) {
+            for (int j = i; j < n ; j++) {
+                    int sum = 0;
+                for (int k = i; k <= j ; k++) {
+                    sum += A[k];
+                }
+                maxSum = Math.max(maxSum,sum);
+            }
+        }
+
+        return maxSum;
+    }
+    public static int maxSumSubArrayCarryForward(int[] A,int n){
         int maxSum = Integer.MIN_VALUE;
         for(int i = 0;i < n ;i++){
             int sum = 0;
@@ -86,10 +102,11 @@ public class MaxSumContiguousSubarray {
     public static void main(String[] args) {
         int[] A = {1, 2, 3, 4, -10};
         int n = A.length;
-        System.out.println(maxSumContributionTechnique(A,n));
+        System.out.println(maxSumSubArrayBruteForce(A,n));
+        System.out.println(maxSumSubArrayCarryForward(A,n));
         System.out.println(maxSumKadanesAlgorithm(A,n));
         System.out.println(maxSumKadanesAlgorithm1(A,n));
-        System.out.println(maxSubArray(A));
+        System.out.println(maxSubArray(A)); //using while loop
 
     }
 }
