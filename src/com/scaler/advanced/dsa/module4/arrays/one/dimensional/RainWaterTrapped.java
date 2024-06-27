@@ -1,6 +1,8 @@
 package com.scaler.advanced.dsa.module4.arrays.one.dimensional;
 
 /**
+ * Company  : Google
+ *
  * Given a vector A of non-negative integers representing an elevation map where the width of each bar is 1,
  * compute how much water it is able to trap after raining.
  *
@@ -21,12 +23,12 @@ public class RainWaterTrapped {
         int[] rightMax = new int[n];
 
         leftMax[0] = A[0];
-        for (int i = 1; i < n; i++) {
+        for (int i = 1; i < n; i++) { //using Prefix Sum
             leftMax[i] = Math.max(A[i], leftMax[i-1]);
         }
 
         rightMax[n-1] = A[n-1];
-        for (int i = n-2; i >=0 ; i--) {
+        for (int i = n - 2; i >= 0 ; i--) { //using Suffix Sum
             rightMax[i] = Math.max(A[i], rightMax[i+1]);
         }
 
@@ -38,6 +40,7 @@ public class RainWaterTrapped {
 
         return max;
     }
+
 
     public static void main(String[] args) {
         int[] A = {0, 1, 0, 2};
