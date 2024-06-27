@@ -18,38 +18,30 @@ import java.util.Arrays;
  * Q: Can the output have 0's before the most significant digit? Or, in other words, is 0 1 2 4 a valid output?
  * A: For the purpose of this question, NO. Even if the input has zeroes before the most significant digit.
  *
- *
+ * Input : [1, 2, 3]
+ * Output : [1, 2, 4]
+ * Explanation : Given vector is [1, 2, 3]. The returned vector should be [1, 2, 4] as 123 + 1 = 124.
  */
 public class AddOneToNumber {
     public static ArrayList<Integer> plusOne(ArrayList<Integer> A) {
-        int N = A.size();
-        int count = 0;
-
-        // check and eliminate if there is any 0's in the start
+        //Remove initial zeros 00123->123
         while(A.get(0)==0 && A.size()>1){
             A.remove(0);
-            count++;  // note down the number of digits deducted
         }
 
-        for(int i=N-1-count;i>=0;i--){
+        int N = A.size();
+        for(int i = N-1; i>=0; i--){
 
-            // checking the digits for last to first;
+            //if nos is 123-> get the last bit increment by one and return.
             if(A.get(i)<9){
-
-                //if the digit is less than 9, can increment by one and simply return
                 A.set(i,A.get(i)+1);
                 return A;
-            }else{
-                // if it is 9, then make it zero and the loop goes to increase the left digit
-                A.set(i,0);
             }
+            //if the last bit is 9 then set it to zero, in the next iteration, one will be added at 10's place
+            A.set(i,0);
         }
-
-        // if it reaches here, it means the all the elements in the array is now 0;
-        //  need to a digits to the start of the array and the current leght of the array will be increased by one.
-        A.add(0);
-        A.set(0,1);
-
+        //Coming out of the above loop means , all the digits were 9's..couldnot return so we need to add a 1 at index 0 and return the ans
+        A.add(0,1);
         return A;
     }
 
