@@ -20,20 +20,21 @@ package com.scaler.advanced.dsa.module4.arrays.two.dimensional;
 public class RowWithMaximumNumberOfOnes {
     public static int solve(int[][] A) {
         int n = A.length;
-        int answer = 0;
+        int m = A[0].length;
+        int rowIndex = 0;
         int i = 0;
-        int j = n - 1;
+        int j = m - 1;
 
         while (i< n && j >=0) {
             if (A[i][j] == 0){
-                i++;//move to the next row
+                i++;//move to the next row that is go down
             } else {//we found 1
-                answer = i;//current i is the max number of 1's
+                rowIndex = i;//current i is the max number of 1's
                 j--;//move one column left
             }
         }
 
-        return answer;
+        return rowIndex;
     }
 
     public static void main(String[] args) {

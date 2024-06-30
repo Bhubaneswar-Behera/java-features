@@ -19,8 +19,8 @@ package com.scaler.advanced.dsa.module4.arrays.two.dimensional;
  */
 public class SearchInARowWiseAnsColumnWiseSortedMatrix {
     public static int solve(int[][] A, int B) {
-        int n = A.length;
-        int m = A[0].length;
+        int n = A.length; //rows
+        int m = A[0].length; //columns
         int answer = Integer.MAX_VALUE;
         int i = 0;
         int j = m - 1;
@@ -29,9 +29,9 @@ public class SearchInARowWiseAnsColumnWiseSortedMatrix {
             if(A[i][j] == B){
                 answer = Math.min(answer,(i+1)*1009 + (j+1));
             }
-            if ( B > A[i][j]){
+            if (A[i][j] < B){//may present in same column so go down
                i++;
-            } else{
+            } else {//element is smaller so go left
                 j--;
             }
         }
