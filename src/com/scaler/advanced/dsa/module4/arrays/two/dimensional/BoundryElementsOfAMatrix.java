@@ -3,8 +3,8 @@ package com.scaler.advanced.dsa.module4.arrays.two.dimensional;
 public class BoundryElementsOfAMatrix {
     public static void solve(int[][] A) {
         int n = A.length;
-        int i = 0;
-        int j = 0;
+        int i = 0;//row index
+        int j = 0;//column index
 
         //From 1st Row Top -->Left To Right
         for (int index = 0;index < n -1;index++) {
