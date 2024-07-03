@@ -32,13 +32,13 @@ public class ContinuousSumQuery {
         int q = B.length;
 
         for (int i = 0; i < q; i++) {
-            int l = B[i][0] - 1;
-            int r = B[i][1] - 1;
+            int left = B[i][0] - 1;
+            int right = B[i][1] - 1;
             int val = B[i][2];
-            array[l] = array[l] + val;
+            array[left] = array[left] + val;
 
-            if ((r+1) < n  ) {
-                array[r + 1] = array[r+1] - val;
+            if ((right+1) < n  ) {
+                array[right + 1] = array[right+1] - val;
             }
         }
 
