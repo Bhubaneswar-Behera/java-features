@@ -28,6 +28,19 @@ public class NumberOf1Bits {
         }
         return answer;
     }
+
+    /**
+     * Keringham's Approach
+     *
+     */
+    public static int numSetBitsApproach3(int A) {
+        int answer = 0;
+        while (A > 0) {
+            A = A & (A - 1);
+            answer++;
+        }
+        return answer;
+    }
     public static boolean checkBits(int A,int i){
         if((A & (1 << i)) > 0){
             return true;
@@ -38,5 +51,6 @@ public class NumberOf1Bits {
         int A = 11;
         System.out.println(numSetBitsApproach1(A));
         System.out.println(numSetBitsApproach2(A));
+        System.out.println(numSetBitsApproach3(A));
     }
 }
