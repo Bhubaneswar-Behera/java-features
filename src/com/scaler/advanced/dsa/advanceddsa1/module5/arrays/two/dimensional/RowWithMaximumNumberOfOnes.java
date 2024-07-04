@@ -22,7 +22,7 @@ public class RowWithMaximumNumberOfOnes {
     public static int solve(int[][] A) {
         int n = A.length;
         int m = A[0].length;
-        int rowIndex = 0;
+        int answer = 0;
         int i = 0;
         int j = m - 1;
 
@@ -30,12 +30,12 @@ public class RowWithMaximumNumberOfOnes {
             if (A[i][j] == 0){
                 i++;//move to the next row that is go down
             } else {//we found 1
-                rowIndex = i;//current i is the max number of 1's
+                answer = i;//current i is the max number of 1's
                 j--;//move one column left
             }
         }
 
-        return rowIndex;
+        return answer;
     }
 
     public static void main(String[] args) {
