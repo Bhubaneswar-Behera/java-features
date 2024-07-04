@@ -23,7 +23,7 @@ public class SumOfAllSubMatrices {
         int m = A[0].length;
         for (int i = 0; i < n ; i++) {
             for (int j = 0; j < n; j++) {
-                answer =answer + A[i][j] *(i+1)*(n-i)*(j+1)*(m-j);
+                answer = answer + A[i][j] *(i+1)*(n-i)*(j+1)*(m-j);
             }
         }
         return answer;
