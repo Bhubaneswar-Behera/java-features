@@ -6,23 +6,23 @@ public class BoundryElementsOfAMatrix {
         int i = 0;//row index
         int j = 0;//column index
 
-        //From 1st Row Top -->Left To Right
-        for (int index = 0;index < n -1;index++) {
+        //Print (n-1) element of Top Row  --> Left To Right
+        for (int index = 0;index < n-1;index++) {
             System.out.print(A[i][j]+" ");
             j++;
         }
-        //From Last Colum --> Top To Bottom
-        for (int index = 0;index < n -1;index++) {
+        //Print (n-1) element of Last Colum --> Top To Bottom
+        for (int index = 0;index < n-1;index++) {
             System.out.print(A[i][j]+" ");
             i++;
         }
-        //From Last Row --> Right To Left
-        for (int index = 0;index < n -1;index++) {
+        //Print (n-1) element of Last Row --> Right To Left
+        for (int index = 0;index < n-1;index++) {
             System.out.print(A[i][j]+" ");
             j--;
         }
-        //From 1st Column -> Bottom To Top
-        for (int index = 0;index < n -1;index++) {
+        //Print (n-1) element of 1st Column --> Bottom To Top
+        for (int index = 0;index < n-1;index++) {
             System.out.print(A[i][j]+" ");
             i--;
         }
