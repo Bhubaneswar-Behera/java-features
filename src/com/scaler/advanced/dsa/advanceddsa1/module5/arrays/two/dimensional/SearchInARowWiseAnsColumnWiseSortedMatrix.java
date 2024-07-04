@@ -22,17 +22,17 @@ public class SearchInARowWiseAnsColumnWiseSortedMatrix {
         int n = A.length; //rows
         int m = A[0].length; //columns
         int answer = Integer.MAX_VALUE;
-        int row = 0;
-        int column = m - 1;
+        int i = 0;
+        int j = m - 1;
 
-        while(row < n && column >= 0){
-            if(A[row][column] == B){
-                answer = Math.min(answer,(row+1)*1009 + (column+1));
+        while(i < n && j >= 0){
+            if(A[i][j] == B){
+                answer = Math.min(answer,(i+1)*1009 + (j+1));
             }
-            if (A[row][column] < B){//may present in same column so go down
-               row++;
+            if (A[i][j] < B){//may present in same column so go down
+               i++;
             } else {//element is smaller so go left
-                column--;
+                j--;
             }
         }
         return answer == Integer.MAX_VALUE ? -1 : answer;
