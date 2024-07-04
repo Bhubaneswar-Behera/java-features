@@ -47,8 +47,8 @@ public class MergeSortedOverlappingIntervals {
         int n = A.length;
         ArrayList<ArrayList<Integer>> answer = new ArrayList<ArrayList<Integer>>();
 
-        int s1 = A[0][0];
-        int e1 = A[0][1];
+        int currentStart = A[0][0];
+        int currentEnd = A[0][1];
 
         for (int i = 1; i < n ; i++) {
 

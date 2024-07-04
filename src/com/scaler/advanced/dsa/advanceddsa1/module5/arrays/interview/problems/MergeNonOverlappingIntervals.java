@@ -17,7 +17,7 @@ import java.util.List;
  * Output : [ [1, 9] ]
  * Explanation : (2,6) completely merges the given intervals
  */
-public class MergeIntervals {
+public class MergeNonOverlappingIntervals {
     public static int[][] insert(int[][] A, int[] B) {
         List<int[]> result = new ArrayList<>();
 
