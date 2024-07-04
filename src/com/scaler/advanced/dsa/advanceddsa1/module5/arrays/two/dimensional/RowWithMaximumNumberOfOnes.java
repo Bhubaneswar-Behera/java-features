@@ -1,7 +1,8 @@
 package com.scaler.advanced.dsa.advanceddsa1.module5.arrays.two.dimensional;
 
 /**
- * Given a binary sorted matrix A of size N x N. Find the row with the maximum number of 1.
+ * Given a binary sorted matrix A of size N x N.
+ * Find the row with the maximum number of 1.
  *
  * NOTE:
  *
