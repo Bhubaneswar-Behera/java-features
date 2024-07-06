@@ -30,7 +30,7 @@ public class NumberOf1Bits {
     }
 
     /**
-     * Keringham's Approach
+     * Kernighan's Approach
      *
      */
     public static int numSetBitsApproach3(int A) {
