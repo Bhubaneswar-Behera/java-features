@@ -28,12 +28,12 @@ public class SingleNumber {
         int answer = 0;
         for (int i = 0; i < 32 ; i++) {
             int count = 0;
-            for (int j = 0; j < n ; j++) {
+            for (int j = 0; j < n ; j++) {//check ith bit is 1 or not
                 if((A[j] & (1<<i)) > 0){
                     count++;
                 }
             }
-            if ((count & 1) == 1) {
+            if ((count & 1) == 1) {//check if its even or not
                 answer = answer | (1<<i);
             }
         }
