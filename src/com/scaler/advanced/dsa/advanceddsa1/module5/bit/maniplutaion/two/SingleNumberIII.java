@@ -53,6 +53,39 @@ public class SingleNumberIII {
         return ans;
     }
 
+    public static int[] solve2(int[] A) {
+        int n = A.length;
+        //find XOR of all the elements
+        int x = 0;
+        for (int i = 0; i < n; i++) {
+            x = x ^ A[i];
+        }
+        //Right Set Bit
+        int  C = x & (~(x-1));
+
+        //set,  unset
+        int set = 0;
+        int unset = 0;
+        for (int i = 0; i < n ; i++) {
+            if ((A[i] & C) != 0) {
+                set = set ^ A[i];
+            } else {
+                unset = unset ^ A[i];
+            }
+        }
+        int[] arr = new int[2];
+        if (set < unset) {
+            arr[0] = set;
+            arr[1] = unset;
+        } else {
+            arr[0] = unset;
+            arr[1] = set;
+        }
+
+
+        return arr;
+
+    }
 
     public static boolean checkBits(int A,int i){
         if((A & (1 << i)) > 0){
