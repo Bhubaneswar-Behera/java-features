@@ -18,7 +18,7 @@ public class Print1ToAFunction {
     }*/
     public static void printIncreasing(int A){
         if(A == 1){
-            System.out.println(A);
+            System.out.print(A+" ");
             return;
         }
         printIncreasing(A - 1);
@@ -37,7 +37,7 @@ public class Print1ToAFunction {
         printDecreasing(A - 1);
     }
     public static void main(String[] args) {
-        int A = 10;
+        int A = 9;
         printIncreasing(A);
         System.out.println();
         printDecreasing(A);
