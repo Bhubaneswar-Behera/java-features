@@ -1,4 +1,4 @@
-package com.scaler.advanced.dsa.module5.sorting.countsort.mergesort;
+package com.scaler.advanced.dsa.advanceddsa2.sorting.countsort.mergesort;
 
 /**
  * Given an array of integers A of size N that is a permutation of [0, 1, 2, ..., (N-1)],

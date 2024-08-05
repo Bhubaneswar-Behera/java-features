@@ -1,4 +1,4 @@
-package com.scaler.advanced.dsa.module5.sorting.countsort.mergesort;
+package com.scaler.advanced.dsa.advanceddsa2.sorting.countsort.mergesort;
 
 
 import java.util.Arrays;

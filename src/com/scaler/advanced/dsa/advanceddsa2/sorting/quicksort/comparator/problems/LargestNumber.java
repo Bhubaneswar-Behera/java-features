@@ -1,7 +1,6 @@
-package com.scaler.advanced.dsa.module5.sorting.quicksort.comparator.problems;
+package com.scaler.advanced.dsa.advanceddsa2.sorting.quicksort.comparator.problems;
 
 import java.util.*;
-import java.util.stream.Collectors;
 
 /**
  * Given an array A of non-negative integers, arrange them such that they form the largest number.

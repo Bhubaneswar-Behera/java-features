@@ -1,4 +1,4 @@
-package com.scaler.advanced.dsa.module5.sorting.quicksort.comparator.problems;
+package com.scaler.advanced.dsa.advanceddsa2.sorting.quicksort.comparator.problems;
 
 import java.util.Arrays;
 import java.util.Collections;
