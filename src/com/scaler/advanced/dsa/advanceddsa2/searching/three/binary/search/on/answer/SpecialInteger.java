@@ -1,4 +1,4 @@
-package com.scaler.advanced.dsa.module5.searching.three.binary.search.on.answer;
+package com.scaler.advanced.dsa.advanceddsa2.searching.three.binary.search.on.answer;
 
 /**
  * Given an array of integers A and an integer B, find and return the maximum

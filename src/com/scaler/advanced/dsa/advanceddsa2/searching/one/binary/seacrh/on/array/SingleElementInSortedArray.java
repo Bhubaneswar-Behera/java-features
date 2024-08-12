@@ -1,4 +1,4 @@
-package com.scaler.advanced.dsa.module5.searching.one.binary.seacrh.on.array;
+package com.scaler.advanced.dsa.advanceddsa2.searching.one.binary.seacrh.on.array;
 
 /**
  * Given a sorted array of integers A where every element appears twice except for one element which appears once,

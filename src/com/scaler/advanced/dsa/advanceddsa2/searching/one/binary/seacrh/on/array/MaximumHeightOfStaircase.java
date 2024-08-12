@@ -1,4 +1,4 @@
-package com.scaler.advanced.dsa.module5.searching.one.binary.seacrh.on.array;
+package com.scaler.advanced.dsa.advanceddsa2.searching.one.binary.seacrh.on.array;
 
 /**
  * Given an integer A representing the number of square blocks. The height of each square block is 1. The task is to create a staircase of max-height using these blocks.

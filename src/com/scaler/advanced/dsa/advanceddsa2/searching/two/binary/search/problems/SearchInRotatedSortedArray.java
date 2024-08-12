@@ -1,4 +1,4 @@
-package com.scaler.advanced.dsa.module5.searching.two.binary.search.problems;
+package com.scaler.advanced.dsa.advanceddsa2.searching.two.binary.search.problems;
 
 /**
  * Given a sorted array of integers A of size N and an integer B,

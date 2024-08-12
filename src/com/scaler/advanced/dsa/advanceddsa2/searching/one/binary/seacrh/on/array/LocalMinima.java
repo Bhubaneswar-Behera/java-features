@@ -1,4 +1,4 @@
-package com.scaler.advanced.dsa.module5.searching.one.binary.seacrh.on.array;
+package com.scaler.advanced.dsa.advanceddsa2.searching.one.binary.seacrh.on.array;
 
 /**
  * A[n] distinct element. Find any local minima of the array.

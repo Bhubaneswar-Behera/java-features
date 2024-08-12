@@ -1,4 +1,4 @@
-package com.scaler.advanced.dsa.module5.searching.two.binary.search.problems;
+package com.scaler.advanced.dsa.advanceddsa2.searching.two.binary.search.problems;
 
 /**
  * Given an integer A. Compute and return the square root of A.
