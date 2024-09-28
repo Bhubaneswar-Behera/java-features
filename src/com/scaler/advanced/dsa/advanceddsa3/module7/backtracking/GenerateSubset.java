@@ -1,4 +1,4 @@
-package com.scaler.advanced.dsa.advanceddsa1.module5.backtracking;
+package com.scaler.advanced.dsa.advanceddsa3.module7.backtracking;
 
 import java.util.ArrayList;
 import java.util.Collections;
@@ -36,7 +36,7 @@ import java.util.List;
  * Explanation : You can see that these are all possible subsets.
  *
  */
-public class Subset {
+public class GenerateSubset {
 
     static ArrayList<ArrayList<Integer>> result = new ArrayList<>();
 
