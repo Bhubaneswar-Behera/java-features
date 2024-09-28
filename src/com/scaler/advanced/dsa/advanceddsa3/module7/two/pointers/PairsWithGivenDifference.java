@@ -1,7 +1,9 @@
-package com.scaler.advanced.dsa.module5.twopointers;
+package com.scaler.advanced.dsa.advanceddsa3.module7.two.pointers;
 
 import java.util.Arrays;
 import java.util.HashMap;
+import java.util.HashSet;
+import java.util.Set;
 
 /**
  * Given an one-dimensional integer array A of size N and an integer B.
@@ -24,26 +26,20 @@ import java.util.HashMap;
  */
 public class PairsWithGivenDifference {
     public static int solve(int[] A, int B) {
-        //Arrays.sort(A);
-        int n = A.length;
-        int i=0,j=1;
-        int delta = Integer.MIN_VALUE;
+        Set<Integer> set = new HashSet<>();
+        Set<String> pairs = new HashSet<>();
 
-        HashMap<Integer,Integer> hashMap = new HashMap<>();
-        while (i<n && j<n){
-            delta = A[j]-A[i];
-            if(delta < B){
-                j++;
-            } else if (delta > B) {
-                i++;
-            }else if(delta == B){
-                if(i!=j){
-                    hashMap.put(A[i],A[j]);
-                }
-                i++;
+        for (int num : A) {
+            if (set.contains(num + B)) {
+                pairs.add((num + B) + "," + num);
             }
+            if (set.contains(num - B)) {
+                pairs.add(num + "," + (num - B));
+            }
+            set.add(num);
         }
-        return hashMap.size();
+
+        return pairs.size();
     }
     public static void main(String[] args) {
             int[] A = {1,1,1,1,1,1,1,1,1,1};

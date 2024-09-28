@@ -1,4 +1,4 @@
-package com.scaler.advanced.dsa.module5.twopointers;
+package com.scaler.advanced.dsa.advanceddsa3.module7.two.pointers;
 
 import java.util.ArrayList;
 import java.util.Arrays;
