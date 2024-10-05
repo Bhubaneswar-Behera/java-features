@@ -1,4 +1,4 @@
-package com.scaler.advanced.dsa.advanceddsa3.module7.backtracking;
+package com.scaler.advanced.dsa.advanceddsa3.module7.backtracking.one;
 
 import java.util.ArrayList;
 import java.util.Collections;
