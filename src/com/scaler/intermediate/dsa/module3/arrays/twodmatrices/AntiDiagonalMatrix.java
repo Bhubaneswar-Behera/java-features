@@ -7,7 +7,7 @@ package com.scaler.intermediate.dsa.module3.arrays.twodmatrices;
  *       int[][] matrix = {{1,5,8},
  *                         {4,3,1},
  *                         {6,5,2}};
- *    Output : 1,3,2
+ *    Output : 8,3,6
  *
  */
 public class AntiDiagonalMatrix {
