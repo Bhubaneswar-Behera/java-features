@@ -1,5 +1,7 @@
 package com.scaler.intermediate.dsa.module3.arrays.twodmatrices;
 
+import java.util.Arrays;
+
 /**
  * Given a 2D integer array A, return the transpose of A.
  *
@@ -26,7 +28,7 @@ public class MatrixTranspose {
         int c = A[0].length;
         int[][] answer = new int[c][n];
         for(int i = 0 ; i< n ;i++){
-            for (int j = 0;j < c ;j++) {
+            for (int j = 0;j < i ;j++) {
                 answer[j][i] = A[i][j];
             }
         }
@@ -55,7 +57,7 @@ public class MatrixTranspose {
             //System.out.println(Arrays.toString(a));
         }
 
-       printTranspose(A);
+       //printTranspose(A);
 
     }
 }
