@@ -79,6 +79,22 @@ public class NobleIntegersNotDistinct {
         return answer > 0 ? 1 : -1;
 
     }
+    public static int countNobleElements(int[] arr){
+        Arrays.sort(arr);
+        int n = arr.length;
+        int count  = 0;
+        int answer = 0;
+        for (int i = 0; i < n ; i++) {
+            if(i == 0 || arr[i] != arr[i-1] ){
+                count = i;
+            }
+            if(count == arr[i]){
+                answer++;
+            }
+        }
+
+        return answer;
+    }
     public static void main(String[] args) {
         int[] A = {-3,0,2,2,5,5,5,5,8,8,10,10,10,14};
         int n = A.length;
@@ -87,6 +103,8 @@ public class NobleIntegersNotDistinct {
 
         int[] A1 = {5,6,2};
         System.out.println(solve(A1));
+
+        System.out.println("Count of noble elements : "+countNobleElements(A));
 
 
     }
