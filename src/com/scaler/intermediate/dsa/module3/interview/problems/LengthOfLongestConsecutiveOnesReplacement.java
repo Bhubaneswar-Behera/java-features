@@ -30,19 +30,19 @@ public class LengthOfLongestConsecutiveOnesReplacement {
         for (int i = 0; i < n; i++) {
             if (nums[i] == 0) {
                 int j = i - 1; //go left
-                int l = 0;
+                int numberOfElementsToTheLeft = 0;//how many element to the left I am taking
                 while (j >= 0 && nums[j] == 1) {
                     j--;
-                    l++;
+                    numberOfElementsToTheLeft++;
                 }
 
                 j = i + 1;//go right
-                int r = 0;
+                int numberOfElementsToTheRight = 0;//how many element to the right I am taking
                 while (j < n && nums[j] == 1) {
                     j++;
-                    r++;
+                    numberOfElementsToTheRight++;
                 }
-                maxCount = Math.max(maxCount, l + r + 1);
+                maxCount = Math.max(maxCount, numberOfElementsToTheLeft + numberOfElementsToTheRight + 1);
             }
         }
 
