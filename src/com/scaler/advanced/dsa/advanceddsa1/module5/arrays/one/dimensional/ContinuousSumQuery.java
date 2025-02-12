@@ -32,24 +32,20 @@ public class ContinuousSumQuery {
         int q = B.length;
 
         for (int i = 0; i < q; i++) {
-            int left = B[i][0] - 1;
-            int right = B[i][1] - 1;
-            int val = B[i][2];
-            array[left] = array[left] + val;
+            int leftIndex = B[i][0] - 1;
+            int rightIndex = B[i][1] - 1;
+            int value = B[i][2];
+            array[leftIndex] = array[leftIndex] + value;
 
-            if ((right+1) < n  ) {
-                array[right + 1] = array[right+1] - val;
+            if ((rightIndex + 1) < n  ) {
+                array[rightIndex + 1] = array[rightIndex + 1] - value;
             }
         }
-
         for (int i = 1; i < n; i++) {
             array[i] = array[i] + array[i - 1];
         }
-
         return array;
     }
-
-
 
     public static void main(String[] args) {
         int A = 5 ;
