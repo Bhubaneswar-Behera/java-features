@@ -33,11 +33,7 @@ public class MaxSubarraySum {
             int sum = 0;
             for (int j = i; j < n ; j++) {
                    sum = sum + A[j];
-                   if(sum > maxSum){
-                       maxSum = sum;
-                   }
-                   //OR
-                   //maxSum = Math.max(maxSum,sum);
+                   maxSum = Math.max(maxSum,sum);
             }
         }
         return maxSum;
