@@ -18,9 +18,9 @@ package com.scaler.advanced.dsa.advanceddsa1.module5.arrays.one.dimensional;
 public class RainWaterTrapped {
     public static int trap(final int[] A) {
         int n = A.length;
-
         int[] leftMax = new int[n];
         int[] rightMax = new int[n];
+        int answer = 0;
 
         leftMax[0] = A[0];
         for (int i = 1; i < n; i++) { //using Prefix Sum
@@ -32,15 +32,11 @@ public class RainWaterTrapped {
             rightMax[i] = Math.max(A[i], rightMax[i+1]);
         }
 
-        int max = 0;
-
         for (int i = 0; i < n ; i++) {
-            max = max + Math.min(leftMax[i],rightMax[i]) - A[i];
+            answer = answer + Math.min(leftMax[i],rightMax[i]) - A[i];
         }
-
-        return max;
+        return answer;
     }
-
 
     public static void main(String[] args) {
         int[] A = {0, 1, 0, 2};
