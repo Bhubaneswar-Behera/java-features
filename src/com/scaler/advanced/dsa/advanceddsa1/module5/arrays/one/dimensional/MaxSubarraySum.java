@@ -47,8 +47,6 @@ public class MaxSubarraySum {
             if(current > maxSum){
                 maxSum = current;
             }
-            //OR
-            //Math.max(maxSum,current);
             if(current < 0){
                 current = 0;
             }
