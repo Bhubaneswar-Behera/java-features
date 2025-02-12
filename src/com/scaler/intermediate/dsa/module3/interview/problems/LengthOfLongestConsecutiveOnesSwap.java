@@ -35,23 +35,23 @@ public class LengthOfLongestConsecutiveOnesSwap {
         for (int i = 0; i < n; i++) {
             if (A.charAt(i) == '0') {
                 int j = i - 1; //go left
-                int l = 0;
+                int numberOfElementsToTheLeft = 0;
                 while (j >= 0 && A.charAt(j) == '1') {
                     j--;
-                    l++;
+                    numberOfElementsToTheLeft++;
                 }
 
                 j = i + 1;//go right
-                int r = 0;
+                int numberOfElementsToTheRight = 0;
                 while (j < n && A.charAt(j) == '1') {
                     j++;
-                    r++;
+                    numberOfElementsToTheRight++;
                 }
-                if(l + r == totalOnes){
-                    maxCount = Math.max(maxCount,l+r);
+                if(numberOfElementsToTheLeft + numberOfElementsToTheRight == totalOnes){
+                    maxCount = Math.max(maxCount,numberOfElementsToTheLeft+numberOfElementsToTheRight);
                 }
                 else{
-                    maxCount = Math.max(maxCount,l+r+1);
+                    maxCount = Math.max(maxCount,numberOfElementsToTheLeft+numberOfElementsToTheRight+1);
                 }
             }
         }
