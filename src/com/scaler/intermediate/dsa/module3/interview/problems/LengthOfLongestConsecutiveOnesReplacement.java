@@ -42,7 +42,7 @@ public class LengthOfLongestConsecutiveOnesReplacement {
                     j++;
                     numberOfElementsToTheRight++;
                 }
-                maxCount = Math.max(maxCount, numberOfElementsToTheLeft + numberOfElementsToTheRight + 1);
+                maxCount = Math.max(maxCount, numberOfElementsToTheLeft + numberOfElementsToTheRight + 1);//+1 as we have to change 0 to 1 also
             }
         }
 
