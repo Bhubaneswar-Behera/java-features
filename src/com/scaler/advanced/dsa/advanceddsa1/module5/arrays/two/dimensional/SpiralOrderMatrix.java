@@ -45,7 +45,7 @@ public class SpiralOrderMatrix {
             }
             i++;
             j++;
-            A = A - 2;
+            A = A - 2;//for each run row and column reduced by 2
         }
         if(A == 1){
             answer[i][j] = value;
