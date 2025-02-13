@@ -22,6 +22,7 @@ public class SearchInARowWiseAnsColumnWiseSortedMatrix {
         int totalNumberOfRows = A.length; //total number of rows
         int totalNumberOfColumns = A[0].length; //total number of columns
         int answer = Integer.MAX_VALUE;
+        //Start from right top position that is row number 0 and totalNumberOfColumns - 1
         int row = 0;
         int column = totalNumberOfColumns - 1;
 
