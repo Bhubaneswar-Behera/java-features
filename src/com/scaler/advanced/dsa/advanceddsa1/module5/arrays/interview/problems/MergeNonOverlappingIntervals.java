@@ -5,7 +5,8 @@ import java.util.Arrays;
 import java.util.List;
 
 /**
- * You have a set of non-overlapping intervals. You are given a new interval [start, end],
+ * You have a set of non-overlapping intervals.
+ * You are given a new interval [start, end],
  * insert this new interval into the set of intervals (merge if necessary).
  * You may assume that the intervals were initially sorted according to their start times.
  *

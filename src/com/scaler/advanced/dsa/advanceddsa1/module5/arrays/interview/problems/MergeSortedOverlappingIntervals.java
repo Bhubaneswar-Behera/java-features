@@ -4,7 +4,8 @@ import java.util.ArrayList;
 
 /**
  * You are given a collection of intervals A in a 2-D array format, where each interval
- * is represented by a pair of integers `[start, end]`. The intervals are sorted based on their start values.
+ * is represented by a pair of integers `[start, end]`.
+ * The intervals are sorted based on their start values.
  * Your task is to merge all overlapping intervals and return the resulting set of non-overlapping intervals.
  *
  * Input 1: [ [1, 3], [2, 6], [8, 10], [15, 18]] Output : [ [1, 6], [8, 10], [15, 18]]
