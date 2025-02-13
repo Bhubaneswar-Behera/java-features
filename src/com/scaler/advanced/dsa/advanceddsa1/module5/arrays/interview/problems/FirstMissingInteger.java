@@ -18,7 +18,6 @@ package com.scaler.advanced.dsa.advanceddsa1.module5.arrays.interview.problems;
 public class FirstMissingInteger {
     public static int firstMissingPositive(int[] A) {
         int n = A.length;
-
         for (int i = 0; i < n ; i++) {
             int x = Math.abs(A[i]);
             if(x >= 1 && x <= n){
@@ -27,12 +26,11 @@ public class FirstMissingInteger {
         }
 
         for (int i = 1; i <= n; i++) {
-            if(A[i-1] > 0){
+            if(A[i - 1] > 0){
                 return i;
             }
         }
-
-        return n+1;
+        return n + 1;
     }
 
     public static int firstMissingPositive1(int[] A) {
@@ -51,14 +49,15 @@ public class FirstMissingInteger {
         }
         //Step 2 :
         for (int i = 0; i < n ; i++) {
-            if (A[i] != i+1 ) {
-                return i+1;
+            if (A[i] != i + 1 ) {
+                return i  +1;
             }
         }
         return n + 1;
     }
+
     public static void main(String[] args) {
-        int[] A = {8,1,4,2,6,3};
+        int[] A = {-5};
         System.out.println(firstMissingPositive(A));
         System.out.println(firstMissingPositive1(A));
 
