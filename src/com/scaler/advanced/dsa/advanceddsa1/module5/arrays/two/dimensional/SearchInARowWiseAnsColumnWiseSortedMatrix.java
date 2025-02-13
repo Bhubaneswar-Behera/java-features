@@ -19,20 +19,20 @@ package com.scaler.advanced.dsa.advanceddsa1.module5.arrays.two.dimensional;
  */
 public class SearchInARowWiseAnsColumnWiseSortedMatrix {
     public static int solve(int[][] A, int B) {
-        int n = A.length; //rows
-        int m = A[0].length; //columns
+        int totalNumberOfRows = A.length; //total number of rows
+        int totalNumberOfColumns = A[0].length; //total number of columns
         int answer = Integer.MAX_VALUE;
-        int i = 0;
-        int j = m - 1;
+        int row = 0;
+        int column = totalNumberOfColumns - 1;
 
-        while(i < n && j >= 0){
-            if(A[i][j] == B){
-                answer = Math.min(answer,(i+1)*1009 + (j+1));
+        while(row < totalNumberOfRows && column >= 0){//row can increase the length and column should be greater than equal to first column
+            if(A[row][column] == B){
+                answer = Math.min(answer,(row +1)*1009 + (column + 1));
             }
-            if (A[i][j] < B){//may present in same column so go down
-               i++;
-            } else {//element is smaller so go left
-                j--;
+            if (A[row][column] < B){//may present in same column so go down (increase the row)
+               row++;
+            } else {//element is smaller so go left(decrease column)
+                column--;
             }
         }
         return answer == Integer.MAX_VALUE ? -1 : answer;
