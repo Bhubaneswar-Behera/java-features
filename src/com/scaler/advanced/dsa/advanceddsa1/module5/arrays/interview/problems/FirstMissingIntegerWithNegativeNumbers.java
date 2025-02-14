@@ -10,7 +10,7 @@ package com.scaler.advanced.dsa.advanceddsa1.module5.arrays.interview.problems;
  * Input : [4,0,1,-5,-10,8,2,6] Output : 3
  *
  */
-public class FirstMissingIntegerNonPositive {
+public class FirstMissingIntegerWithNegativeNumbers {
     public static int firstMissingPositive(int[] A) {
         int n = A.length;
 
