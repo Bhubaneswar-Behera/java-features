@@ -15,40 +15,41 @@ package com.scaler.advanced.dsa.advanceddsa1.module5.bit.maniplutaion.two;
  */
 public class SingleNumberIII {
     public static int[] solve(int[] A) {
-        int n=A.length;
-//Step 1. find XOR of all the elements
-        int x=0;
-        for(int i=0;i<n;i++){
-            x=x^A[i];
+        int n = A.length;
+    //Step 1. find XOR of all the elements
+        int xorAll = 0;
+        for(int i = 0;i < n;i++){
+            xorAll = xorAll ^ A[i];
         }
-// Step 2. find pos of first set bit in x
-        int pos=0;
-        for(int i=0;i<32;i++){
-            if((x&(1<<i))>0){
-                pos=i;
+    // Step 2. find pos of first set bit in x
+        int pos = 0;
+        for(int i = 0;i < 32;i++){
+            if((xorAll & (1 << i)) > 0){
+                pos = i;
                 break;
             }
         }
-        //Step 3. Diffferentiate on the basis of whether bit is set or unset
-        int set=0,unset=0;
-        for(int i=0;i<n;i++){
+        //Step 3. differentiate on the basis of whether bit is set or unset
+        int set = 0;
+        int unset = 0;
+        for(int i = 0;i < n;i++){
             if(checkBits(A[i],pos)){
-                set=set^A[i];
+                set = set ^ A[i];
             }
             else{
-                unset=unset^A[i];
+                unset = unset ^ A[i];
             }
         }
         System.out.println(set);
         System.out.println(unset);
-        int[] ans=new int[2];
+        int[] ans = new int[2];
         if(unset> set){
-            ans[0]=set;
-            ans[1]=unset;
+            ans[0] = set;
+            ans[1] = unset;
         }
         else{
-            ans[0]=unset;
-            ans[1]=set;
+            ans[0] = unset;
+            ans[1] = set;
         }
         return ans;
     }
