@@ -20,7 +20,7 @@ package com.scaler.advanced.dsa.advanceddsa1.module5.bit.maniplutaion.one;
  * so we make it unset
  *
  */
-public class ToggleIThBit {
+public class  ToggleIThBit {
     public static int solve(int A, int B) {
         return A ^(1 << B);
     }
