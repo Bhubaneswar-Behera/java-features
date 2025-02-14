@@ -1,10 +1,11 @@
 package com.scaler.advanced.dsa.advanceddsa1.module5.bit.maniplutaion.two;
 
 /**
- * Given an array A. For every pair of indices i and j (i != j), find the maximum A[i] & A[j].
+ * Given an array A. For every pair of indices i and j (i != j),
+ * find the maximum A[i] & A[j].
  *
  * Input : A = [53, 39, 88] Output :37
- *Explanation :-
+ * Explanation :-
  * 53 & 39 = 37
  * 39 & 88 = 0
  * 53 & 88 = 16
@@ -15,7 +16,7 @@ package com.scaler.advanced.dsa.advanceddsa1.module5.bit.maniplutaion.two;
  * Explanation :-
  * Maximum bitwise and among all pairs is (38, 44) = 36
  */
-public class MaximumANDPair {
+public class MaximumAndPair {
 
     public static int solve(int[] A) {
         int n = A.length;

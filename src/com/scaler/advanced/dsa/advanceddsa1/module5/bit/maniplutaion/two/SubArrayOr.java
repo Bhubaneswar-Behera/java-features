@@ -28,7 +28,7 @@ package com.scaler.advanced.dsa.advanceddsa1.module5.bit.maniplutaion.two;
  * Explanation :
  * Sum of value of all subarray is 110.
  */
-public class SUBARRAYOR {
+public class SubArrayOr {
     public static int solve(int[] A) {
         long sum = 0;
         long n=((long)(A.length)*(A.length+1))/2;
