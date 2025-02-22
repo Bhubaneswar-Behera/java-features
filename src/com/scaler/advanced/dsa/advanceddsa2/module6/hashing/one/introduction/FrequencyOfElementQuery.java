@@ -29,7 +29,7 @@ public class FrequencyOfElementQuery {
         int[] result = new int[q];
 
         for (int i = 0; i < n ; i++) {
-            hasMap.put(A[i],hasMap.getOrDefault(A[i] , 0)+1);
+            hasMap.put(A[i],hasMap.getOrDefault(A[i] , 0) + 1);
         }
 
         for (int i = 0; i < q; i++) {
