@@ -1,4 +1,4 @@
-package com.scaler.advanced.dsa.advanceddsa3.module7.two.pointers;
+package com.scaler.advanced.dsa.advanceddsa2.module6.twopointers;
 
 /**
  * Given a sorted array of integers (not necessarily distinct) A and an integer B,

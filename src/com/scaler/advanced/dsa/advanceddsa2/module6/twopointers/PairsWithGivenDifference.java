@@ -1,7 +1,5 @@
-package com.scaler.advanced.dsa.advanceddsa3.module7.two.pointers;
+package com.scaler.advanced.dsa.advanceddsa2.module6.twopointers;
 
-import java.util.Arrays;
-import java.util.HashMap;
 import java.util.HashSet;
 import java.util.Set;
 

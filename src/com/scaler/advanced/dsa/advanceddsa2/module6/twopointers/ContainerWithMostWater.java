@@ -1,4 +1,4 @@
-package com.scaler.advanced.dsa.advanceddsa3.module7.two.pointers;
+package com.scaler.advanced.dsa.advanceddsa2.module6.twopointers;
 
 /**
  * Given N non-negative integers A[0], A[1], ..., A[N-1] ,
