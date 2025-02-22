@@ -1,4 +1,4 @@
-package com.scaler.advanced.dsa.advanceddsa1.module5.hashing.introduction;
+package com.scaler.advanced.dsa.advanceddsa2.module6.hashing.one.introduction;
 
 import java.util.Arrays;
 import java.util.HashMap;
