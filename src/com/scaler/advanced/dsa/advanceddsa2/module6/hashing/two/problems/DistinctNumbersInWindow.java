@@ -1,4 +1,4 @@
-package com.scaler.advanced.dsa.advanceddsa1.module5.hashing.problems;
+package com.scaler.advanced.dsa.advanceddsa2.module6.hashing.two.problems;
 
 import java.util.*;
 
