@@ -9,7 +9,7 @@ public class FirstNonRepeatingElement {
         Map<Integer,Integer> hashMap = new HashMap<>();
 
         for (int i = 0; i < n; i++) {
-            hashMap.put(A[i], hashMap.getOrDefault(A[i] , 0)+1);
+            hashMap.put(A[i], hashMap.getOrDefault(A[i] , 0 ) + 1);
         }
 
         for (int i = 0; i < n ; i++) {
