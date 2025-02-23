@@ -29,11 +29,11 @@ public class ScalerFindLeastAppearance {
 
         Map<Integer,Integer> hashMap = new HashMap<>();
         for (int i = 0; i < n ; i++) {
-            hashMap.put(A[i] , hashMap.getOrDefault(A[i] , 0)+ 1);
+            hashMap.put(A[i] , hashMap.getOrDefault(A[i] , 0) +  1);
         }
 
         int min = Integer.MAX_VALUE;
-        for (int x: hashMap.keySet()) {
+        for (int x : hashMap.keySet()) {
             min = Math.min(min,hashMap.get(x));
         }
         int count = 0;
