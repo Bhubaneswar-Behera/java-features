@@ -27,7 +27,7 @@ public class CountPairSum {
             if (hashMap.containsKey(B - A[i])) {
                 answer = answer + hashMap.get(B - A[i]);
             }
-            hashMap.put(A[i] , hashMap.getOrDefault(A[i] , 0)+ 1);
+            hashMap.put(A[i] , hashMap.getOrDefault(A[i] , 0) + 1);
         }
 
         return answer % 1000000007;
