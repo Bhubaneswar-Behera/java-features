@@ -19,7 +19,7 @@ public class CheckPairSum {
     public static int solveBruteForce(int A, int[] B) {
         int n = B.length;
         for (int i = 0; i < n ; i++) {
-            for (int j = i+1; j < n ; j++) {
+            for (int j = i + 1; j < n ; j++) {
                 if (B[i] + B[j] == A) {
                     return 1;
                 }
