@@ -1,7 +1,9 @@
 package com.scaler.advanced.dsa.advanceddsa2.module6.hashing.one.introduction;
 
 import java.util.HashMap;
+import java.util.HashSet;
 import java.util.Map;
+import java.util.Set;
 
 /**
  * Given an array A of N integers.
@@ -16,7 +18,7 @@ import java.util.Map;
  * Explanation :
  * The subarray with zero sum is [-1, 2, -1].
  */
-public class CountSubarrayZeroSum {
+public class CountSubArrayZeroSum {
     public static int solve(int[] A) {
         int n = A.length;
         Map<Long,Integer> hashMap = new HashMap<>();
@@ -36,9 +38,26 @@ public class CountSubarrayZeroSum {
         }
         return (int) (answer % 1000000007);
     }
+
+    public static boolean isSubArrayZeroSumExists(int[] A) {
+        int n = A.length;
+        Set<Integer> hashSet = new HashSet<>();
+        int sum = 0;
+
+        for (int i = 0; i < n ; i++) {
+            sum = sum + A[i];
+            if(sum == 0 || hashSet.contains(sum)){
+                return true;
+            }
+            hashSet.add(sum);
+        }
+        return false;
+    }
+
     public static void main(String[] args) {
         int[] A = {1, -1, -2, 2};
         System.out.println(solve(A));
+        System.out.println(isSubArrayZeroSumExists(A));
 
     }
 }
