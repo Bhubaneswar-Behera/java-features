@@ -24,6 +24,7 @@ import java.util.*;
  * Input : A = [1, 1, 2, 2]       B = 1  Output 2: [1, 1, 1, 1]
  */
 public class DistinctNumbersInWindow {
+    //Time complexity O(n * B) , Space Complexity O(B)
     public static int[] countDistinctElements(int[] A, int B) {
         int n = A.length;
         List<Integer> result = new ArrayList<>();
@@ -38,13 +39,14 @@ public class DistinctNumbersInWindow {
         return result.stream().mapToInt(Integer::intValue).toArray();
     }
 
+    //Time complexity O(n) ,  Space Complexity O(B)
     public static int[] countDistinctElementsOptimized(int[] A, int B) {
         int n = A.length;
         List<Integer> result = new ArrayList<>();
         Map<Integer,Integer> hashMap = new HashMap<>();
 
         for (int i = 0; i < B   ; i++) {
-            hashMap.put(A[i], hashMap.getOrDefault(A[i] , 0)+1 );
+            hashMap.put(A[i], hashMap.getOrDefault(A[i] , 0) + 1 );
         }
 
         result.add(hashMap.size());
@@ -53,9 +55,42 @@ public class DistinctNumbersInWindow {
             hashMap.put(A[i - B], hashMap.get(A[i - B]) -1);
 
             if (hashMap.get(A[i - B]) == 0) {
-                hashMap.remove(A[i-B]);
+                hashMap.remove(A[i - B]);
             }
-            hashMap.put(A[i], hashMap.getOrDefault(A[i] , 0)+1 );
+            hashMap.put(A[i], hashMap.getOrDefault(A[i] , 0) + 1 );
+            result.add(hashMap.size());
+        }
+
+        return result.stream().mapToInt(Integer::intValue).toArray();
+    }
+
+    //Time complexity O(n) ,  Space Complexity O(B)
+    public static int[] countDistinctElementsWithoutHashMapGetOrDefault(int[] A, int B) {
+        int n = A.length;
+        List<Integer> result = new ArrayList<>();
+        Map<Integer,Integer> hashMap = new HashMap<>();
+
+        for (int i = 0; i < B   ; i++) {
+            if(hashMap.containsKey(A[i])){
+                hashMap.put(A[i] , hashMap.get(A[i]) + 1);
+            } else {
+                hashMap.put(A[i],1);
+            }
+        }
+
+        result.add(hashMap.size());
+
+        for (int i = B; i < n ; i++) {
+            hashMap.put(A[i - B], hashMap.get(A[i - B]) -1);
+
+            if (hashMap.get(A[i - B]) == 0) {
+                hashMap.remove(A[i - B]);
+            }
+            if(hashMap.containsKey(A[i])){
+                hashMap.put(A[i] , hashMap.get(A[i]) + 1);
+            } else {
+                hashMap.put(A[i],1);
+            }
             result.add(hashMap.size());
         }
 
@@ -67,6 +102,7 @@ public class DistinctNumbersInWindow {
 
         System.out.println(Arrays.toString(countDistinctElements(A,B)));
         System.out.println(Arrays.toString(countDistinctElementsOptimized(A,B)));
+        System.out.println(Arrays.toString(countDistinctElementsWithoutHashMapGetOrDefault(A,B)));
 
     }
 }
