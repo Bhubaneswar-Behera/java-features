@@ -8,7 +8,7 @@ public class MergeTwoSortedArrayEvenAndOdd {
         int n = A.length;
         int countOdd = 0;
         int countEven = 0;
-
+        //form 2 arrays for even and odd
         for (int i = 0; i < n ; i++) {
             if (A[i] % 2 == 0) {
                 countEven++;
@@ -22,6 +22,7 @@ public class MergeTwoSortedArrayEvenAndOdd {
         int e = 0;
         int o = 0;
 
+        //populate even and odd in the respective even and odd arrys
         for (int i = 0; i < n ; i++) {
             if (A[i] % 2 == 0) {
                 evenArray[e] = A[i];
