@@ -2,10 +2,16 @@ package com.scaler.advanced.dsa.advanceddsa2.module6.sorting.countsort.mergesort
 
 import java.util.Arrays;
 
+/**
+ *
+ * Input  : [ 3, 10, 6, 8, 15, 2, 12, 18, 17]
+ * Output : [ 2, 3,  6, 8, 10, 12, 15, 17, 18]
+ *
+ */
 public class MergeSort {
 
     public static void mergeSort(int A[], int n ) {
-        mergeSort(A,0,n-1);
+        mergeSort(A,0,n - 1);
     }
 
     public static void mergeSort(int A[], int l, int r) {
@@ -23,8 +29,8 @@ public class MergeSort {
         //Merge sorted halves A[l....mid] and A[mid+1....r]
         //and return A[l...r] in sorted array
         int N = A.length;
-        int n1 = mid - l + 1;
-        int n2 = r - mid;
+        int n1 = mid - l + 1; // [left,mid] ==> [mid - left + 1]
+        int n2 = r - mid; //[mid + 1 , right] ==> right - mid + 1 - 1 ==> right - mid
 
         int leftArray[] = new int[n1];
         int rightArray[] = new int[n2];
