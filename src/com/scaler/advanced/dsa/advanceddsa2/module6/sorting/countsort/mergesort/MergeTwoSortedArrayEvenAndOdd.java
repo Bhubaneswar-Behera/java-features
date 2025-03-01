@@ -2,6 +2,13 @@ package com.scaler.advanced.dsa.advanceddsa2.module6.sorting.countsort.mergesort
 
 import java.util.Arrays;
 
+/**
+ * Given an integer arr[] wheer all odd elements are sorted and all even elements are sorted.
+ * Sort the entire array
+ *
+ * Input  : [ 2, 5, 4, 8, 11, 13, 10, 15, 21 ]
+ * Output : [ 2, 4, 5, 8, 10, 11, 13, 15, 21 ]
+ */
 public class MergeTwoSortedArrayEvenAndOdd {
 
     public static void merge(int[] A){
