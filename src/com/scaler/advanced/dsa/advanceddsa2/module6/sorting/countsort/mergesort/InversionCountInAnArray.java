@@ -41,29 +41,29 @@ public class InversionCountInAnArray {
 
         int left = 0;
         int right = 0;
-        while(left< n1 && right < n2)
+        while(left < n1 && right < n2)
         {
-            if(leftArray[left]<=rightArray[right])
+            if(leftArray[left] <= rightArray[right])
             {
                 A[index] = leftArray[left];
                 left++;
             }
             else
-            {
+            {//that means A[i] > A[j]
                 A[index] = rightArray[right];
                 right++;
-                inversionCount = inversionCount +(n1-left);
+                inversionCount = inversionCount + (n1-left);
                 inversionCount %= 1000000007;
             }
             index++;
         }
-        while(left<leftArray.length)
+        while(left < leftArray.length)
         {
             A[index] = leftArray[left];
             left++;
             index++;
         }
-        while(right<rightArray.length)
+        while(right < rightArray.length)
         {
             A[index] = rightArray[right];
             right++;
