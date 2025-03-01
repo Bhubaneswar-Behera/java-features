@@ -3,7 +3,7 @@ package com.scaler.advanced.dsa.advanceddsa2.module6.sorting.countsort.mergesort
 import java.util.Arrays;
 
 /**
- * Find the smallest number that can be fomred by rearranging thge digits of the given number
+ * Find the smallest number that can be formed by rearranging the digits of the given number
  * in an array.Return as an array.
  *
  * Input :  {6,3,4,2,7,2,1}
