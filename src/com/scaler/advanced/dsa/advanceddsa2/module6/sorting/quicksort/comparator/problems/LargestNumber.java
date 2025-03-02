@@ -29,7 +29,9 @@ public class LargestNumber {
                 return s2.compareTo(s1);
             }
         });
+
         StringBuilder sb = new StringBuilder();
+
         for (int i = 0; i < A.size(); i++) {
             sb.append(A.get(i));
         }
