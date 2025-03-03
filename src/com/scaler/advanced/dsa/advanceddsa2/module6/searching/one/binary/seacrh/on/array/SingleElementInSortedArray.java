@@ -24,7 +24,9 @@ public class SingleElementInSortedArray {
         while (l <= h) {
            int mid = l + (h - l) / 2;
             //checking mid is unique --> mid is the target
-            if((mid == 0 || A[mid] != A[mid - 1]) && (mid == n -1 || A[mid] != A[ mid + 1])){
+            //mid == 0 means first element is unique
+            //mid == n - 1 last element is unique
+            if((mid == 0 || A[mid] != A[mid - 1]) && (mid == n - 1 || A[mid] != A[ mid + 1])){
                 return A[mid];
             } else if (A[mid] == A[mid + 1]) { //at first occurrence
                 if (mid % 2 == 0) { // Even Odd Pair
