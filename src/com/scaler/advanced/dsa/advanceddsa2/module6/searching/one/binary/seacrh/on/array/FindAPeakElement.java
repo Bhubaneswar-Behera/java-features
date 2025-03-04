@@ -24,13 +24,13 @@ public class FindAPeakElement {
         int l = 0;
         int h = n - 1;
 
-        if(n==1){
+        if(n == 1){
             return A[0];
         }
-        if(A[0]>A[1]){
+        if(A[0] > A[1]){
             return A[0];
         }
-        if(A[n-1]>=A[n-2]){
+        if(A[n-1] >= A[n-2]){
             return A[n-1];
         }
 
@@ -40,9 +40,9 @@ public class FindAPeakElement {
                && (mid == n - 1 || A[mid] > A[mid + 1])){
                 return A[mid];
             } else if (mid == n -1 || A[mid] < A[mid + 1]) {
-                    l = mid + 1;
+                    l = mid + 1;//move to the right
             } else {
-                h = mid - 1;
+                h = mid - 1;//move to the left
             }
         }
         return -1;
