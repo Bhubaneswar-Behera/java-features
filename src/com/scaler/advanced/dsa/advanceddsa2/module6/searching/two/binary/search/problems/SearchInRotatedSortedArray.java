@@ -24,7 +24,7 @@ public class SearchInRotatedSortedArray {
         int n = A.length;
         int l = 0;
         int h = n - 1;
-         int maxIndex = -1;
+        int maxIndex = -1;
 
         while (l <= h) {
             int mid = l + (h - l) / 2;
@@ -38,14 +38,12 @@ public class SearchInRotatedSortedArray {
         if (B >= A[0]) {
             return binarySearch(A,B,0,maxIndex);
         }  else {
-            return binarySearch(A,B,maxIndex+1 , n - 1);
+            return binarySearch(A,B,maxIndex + 1 , n - 1);
         }
         //return -1;
     }
 
     public static int binarySearch(int[] A, int k ,int l, int h){
-        //int h = maxI;
-
         while (l <= h){
             int mid = l + (h - l) / 2;
             if (A[mid] == k){
