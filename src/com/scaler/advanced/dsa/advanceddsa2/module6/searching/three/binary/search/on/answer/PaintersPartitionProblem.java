@@ -38,8 +38,8 @@ public class PaintersPartitionProblem {
         long high = sum * B;
         long low = max * B;
         while(low <= high){
-            long mid = (low + high)/2;
-            int painters = (int) numberOfPainters(C, B, mid);
+            long mid = low + (high-low) / 2;
+            int painters = (int) numberOfPainters(C, B, mid); //Array , n , mid
             if(painters <= A) {
                 answer = (int) (mid % 10000003);
                 high = mid - 1;
@@ -51,15 +51,15 @@ public class PaintersPartitionProblem {
         return  answer % 10000003;
     }
     private static long numberOfPainters(int[] C, long B, long mid){
-        long sum=(long)C[0]*B;
-        long ans=1;
-        for(int i=1;i < C.length;i++)
+        long sum = (long)C[0]*B;
+        long ans = 1;
+        for(int i = 1;i < C.length;i++)
         {
-            sum=sum+(long)C[i]*B;
-            if(sum>mid)
+            sum = sum +(long)C[i] * B;
+            if(sum > mid)
             {
                 ans++;
-                sum=(long)C[i]*B;
+                sum = (long)C[i]*B;
             }
         }
         return ans;
@@ -75,14 +75,14 @@ public class PaintersPartitionProblem {
 
 
     public static int paint(int A, int B, ArrayList<Integer> C) {
-        int n=C.size();
-        long l=getMax(C)*B;
-        long h=getSum(C)*B;
-        long ans=0;
-        long mid=0;
-        while(l<=h)
+        int n  =C.size();
+        long l = getMax(C) * B;
+        long h = getSum(C) * B;
+        long ans = 0;
+        long mid = 0;
+        while(l <= h)
         {
-            mid=l+(h-l)/2;
+            mid = l + (h-l)/2;
             if(countNoOfPainters(mid,C,B)<=A)
             {
                 ans=(int)(mid%10000003);
@@ -116,7 +116,7 @@ public class PaintersPartitionProblem {
         long sum=0;
         for(int i:A)
         {
-            sum+=i;
+            sum += i;
         }
         return sum;
     }
