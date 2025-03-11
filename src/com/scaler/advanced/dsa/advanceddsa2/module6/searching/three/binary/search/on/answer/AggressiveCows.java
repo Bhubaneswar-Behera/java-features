@@ -31,7 +31,7 @@ public class AggressiveCows {
             int mid = low + (high-low)/2;
             if(numberOfCows(A,n,mid) >= B){
                 answer = mid;
-                low = mid  +1;
+                low = mid + 1;
             } else {
                 high = mid - 1;
             }
