@@ -54,9 +54,26 @@ public class SubarrayWithGivenSum {
 
         return answer.stream().mapToInt(Integer::intValue).toArray();
     }
+    public static int[] twoSum(int[] A, int B) {
+        int i = 0;
+        int j = A.length - 1;
+
+        while (i < j) {
+            if(A[i] + A[j] == B){
+                return new int[]{A[i], A[j]};
+            } else if (A[i] + A[j] < B) {
+                i++;
+            } else {
+                j--;
+
+            }
+        }
+        return new int[]{-1,-1};
+    }
     public static void main(String[] args) {
         int[] A = {1, 2, 3, 4, 5};
         int B = 5;
         System.out.println(Arrays.toString(solve(A,B)));
+        System.out.println(Arrays.toString(twoSum(A, B)));
     }
 }
