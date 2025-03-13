@@ -74,6 +74,49 @@ public class PairsWithGivenSumII {
         }
         return (int) count; // Cast count back to int before returning
     }
+
+    public static int solveWithDuplicates1(int[] A, int B) {
+        int n = A.length;
+        long count = 0; // Use long to avoid overflow during calculations
+        // Initialize two pointers
+        int i = 0;
+        int j = n - 1;
+        while (i < j) {
+            int sum = A[i] + A[j];
+            if (sum == B) {
+                // If the sum is equal to B, count all pairs formed by left and right pointers
+                // This is given by (right - left) since the array is sorted
+                int c1 = 0;
+                int c2 = 0;
+                int x = A[i];
+                int y = A[j];
+                // how many times the element x appears consecutively
+                // starting from the current position i and increments i
+                // accordingly
+                while (i < n && A[i] == x) {
+                    c1++;
+                    i++;
+                }
+                // how many times the element y appears consecutively
+                while (j >= 0 && A[j] == y) {
+                    c2++;
+                    j--;
+                }
+                if (x == y) {
+                    count += (long) c1 * (c1 - 1) / 2;
+                } else {
+                    count += (long) c1 * c2;
+                }
+            } else if (sum < B) {
+                // If sum is less than B, move left pointer forward
+                i++;
+            } else {
+                // If sum is greater than B, move right pointer backward
+                j--;
+            }
+        }
+        return (int) count; // Cast count back to int before returning
+    }
     public static int countTwoSumPairs(int[] A, int B) {
         int i = 0;
         int j = A.length - 1;
