@@ -70,10 +70,33 @@ public class SubarrayWithGivenSum {
         }
         return new int[]{-1,-1};
     }
+    public static boolean getSum(int[] A, int K){
+        int i = 0;
+        int j = 0;
+        int n = A.length;
+        int sum = A[0];
+
+        while (j < n) {
+            if(sum == K){
+                return true;
+            } else if (sum < K) {
+                j++;
+                if (j == n){
+                    return false;
+                }
+                sum += A[j];
+            } else {
+                sum -= A[i];
+                i++;
+            }
+        }
+        return false;
+    }
     public static void main(String[] args) {
         int[] A = {1, 2, 3, 4, 5};
         int B = 5;
         System.out.println(Arrays.toString(solve(A,B)));
         System.out.println(Arrays.toString(twoSum(A, B)));
+        System.out.println(getSum(A,B));
     }
 }
