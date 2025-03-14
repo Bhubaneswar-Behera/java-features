@@ -98,6 +98,7 @@ public class PairsWithGivenSumII {
                     i++;
                 }
                 // how many times the element y appears consecutively
+                // starting from the current position j and decrements j
                 while (j >= 0 && A[j] == y) {
                     c2++;
                     j--;
