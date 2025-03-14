@@ -39,9 +39,44 @@ public class PairsWithGivenDifference {
 
         return pairs.size();
     }
+
+    public static int solveFromStartPosition(int[] A, int B) {
+        int n = A.length - 1;
+       int i = 0;
+         int j = 1;
+         while (j < n) {
+               if(A[j] - A[i] == B) {
+                   return 1;
+               } else if(A[j] - A[i] < B) {
+                   j++;
+               } else {
+                   i++;
+
+               }
+         }
+         return -1;
+    }
+    public static int solveFromLastPosition(int[] A, int B) {
+        int n = A.length - 1;
+        int i = n - 2;
+        int j = n - 1;
+        while (i >= 0) {
+            if(A[j] - A[i] == B) {
+                return 1;
+            } else if(A[j] - A[i] < B) {
+                i--;
+            } else {
+                j--;
+
+            }
+        }
+        return -1;
+    }
     public static void main(String[] args) {
             int[] A = {1,1,1,1,1,1,1,1,1,1};
             int B = 0;
             System.out.println(solve(A,B));
+        System.out.println(solveFromStartPosition(A,B));
+        System.out.println(solveFromLastPosition(A,B));
     }
 }
