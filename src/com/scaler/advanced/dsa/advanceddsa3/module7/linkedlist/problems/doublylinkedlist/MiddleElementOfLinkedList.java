@@ -1,5 +1,7 @@
 package com.scaler.advanced.dsa.advanceddsa3.module7.linkedlist.problems.doublylinkedlist;
 
+import com.scaler.advanced.dsa.advanceddsa3.module7.linkedlistproblems.doublylinked.list.ListNode;
+
 /**
  * Given a linked list of integers, find and return the
  * middle element of the linked list.

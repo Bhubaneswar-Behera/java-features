@@ -1,4 +1,4 @@
-package com.scaler.advanced.dsa.advanceddsa3.module7.linkedlist.problems.doublylinkedlist;
+package com.scaler.advanced.dsa.advanceddsa3.module7.linkedlistproblems.doublylinked.list;
 
 public class ListNode {
     public int val;
