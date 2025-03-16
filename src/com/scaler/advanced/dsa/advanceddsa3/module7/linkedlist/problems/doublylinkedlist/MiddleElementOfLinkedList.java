@@ -1,6 +1,5 @@
 package com.scaler.advanced.dsa.advanceddsa3.module7.linkedlist.problems.doublylinkedlist;
 
-import com.scaler.advanced.dsa.advanceddsa3.module7.linkedlistproblems.doublylinked.list.ListNode;
 
 /**
  * Given a linked list of integers, find and return the
@@ -21,13 +20,13 @@ import com.scaler.advanced.dsa.advanceddsa3.module7.linkedlistproblems.doublylin
  */
 public class MiddleElementOfLinkedList {
 
-    public int solve(ListNode A) {
+    public int solve(Node A) {
         if (A == null) {
             return -1;  // Empty list case (though not required per constraints)
         }
 
-        ListNode slow = A;
-        ListNode fast = A;
+        Node slow = A;
+        Node fast = A;
 
         // Traverse the list with slow and fast pointers
         while (fast != null && fast.next != null) {
@@ -36,7 +35,7 @@ public class MiddleElementOfLinkedList {
         }
 
         // Slow pointer will now be at the middle
-        return slow.val;
+        return slow.data;
     }
     public static void main(String[] args) {
 
