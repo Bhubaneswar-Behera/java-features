@@ -1,4 +1,4 @@
-package com.scaler.advanced.dsa.advanceddsa3.module7.linkedlist.problems.doublylinkedlist;
+package com.scaler.advanced.dsa.advanceddsa3.module7.linkedlist.sorting.and.detecting.loop;
 
 public class FirstElementOfCycleLinkedList {
     //method to give the starting point of the cycle in the linked list
