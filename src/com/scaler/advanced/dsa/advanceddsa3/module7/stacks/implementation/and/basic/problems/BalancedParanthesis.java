@@ -1,4 +1,4 @@
-package com.scaler.advanced.dsa.advanceddsa3.module7.stacks1;
+package com.scaler.advanced.dsa.advanceddsa3.module7.stacks.implementation.and.basic.problems;
 
 import java.util.Stack;
 
